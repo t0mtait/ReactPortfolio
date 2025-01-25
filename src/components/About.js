@@ -8,8 +8,8 @@ function About() {
                     <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">About
                         me</h1>
                     <p className="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl">Hi!
-                        I am a third year Computer Science major at the University of New Brunswick. I have a passion
-                        for learning the latest web development technologies, and love to solve LeetCode problems in my
+                        I am a fourth year Computer Science major at the University of New Brunswick. I have a passion
+                        for learning the latest development technologies, and enjoy solving LeetCode problems in my
                         free time.
                         <br/><br/>On this page, you can find information about my past work experience, my side
                         projects, and ways in which you can contact me.</p>

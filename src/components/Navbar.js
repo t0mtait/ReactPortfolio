@@ -23,20 +23,20 @@ function Navbar() {
                 <div className="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
                     <ul className="flex flex-col font-medium mt-4 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-gray-800 md:bg-transparent border-gray-700">
                         <li>
-                            <a href="#"
+                            <a href="#about"
                                className="block py-2 px-3 md:p-0 text-white rounded hover:text-yellow-300 bg-transparent"
                                aria-current="page">About</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#experience"
                                className="block py-2 px-3 md:p-0 text-white rounded hover:text-yellow-300 bg-transparent">Experience</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#projects"
                                className="block py-2 px-3 md:p-0 text-white rounded hover:text-yellow-300 bg-transparent">Projects</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#contact"
                                className="block py-2 px-3 md:p-0 text-white rounded hover:text-yellow-300 bg-transparent">Contact</a>
                         </li>
                     </ul>

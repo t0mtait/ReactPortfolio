@@ -3,8 +3,11 @@ import { AnimatedBackground } from 'animated-backgrounds';
 function Background() {
     return (
         <div>
-            <AnimatedBackground animationName="cosmicDust" />
+            <AnimatedBackground animationName="gradientWave" />
         </div>
     );
 }
 export default Background;
+
+
+// auroraBorealis also good
