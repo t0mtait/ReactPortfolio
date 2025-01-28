@@ -1,14 +1,15 @@
 function Experience() {
     return (
         <section class="bg-transparent" id = "experience">
-            <h1 className="mb-4 text-4xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Experience</h1>
+            <h1 className="mt-2 mb-4 text-4xl text-center font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Experience</h1>
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
 
                 <div className="mt-4 md:mt-0">
-                    <h2 className="mb-1 text-4xl tracking-tight font-extrabold text-white ">Software Developer</h2>
+                    
                     <h2 className="mb-1 text-2xl tracking-tight font-extrabold text-white ">VeroSource</h2>
-                    <h2 className="mb-4 text-l tracking-tight font-extrabold text-white ">January 2025 - Present</h2>
+                    <h2 className="mb-1 text-xl tracking-tight font-extrabold text-white ">Software Developer</h2>
+                    <h2 className="mb-4 text-m tracking-tight font-extrabold text-white ">January 2025 - Present</h2>
                     <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
 
                     </ul>
@@ -18,12 +19,11 @@ function Experience() {
             </div>
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-                <img className="w-3/4 hidden dark:block" src="sonrai.png" alt="dashboard image"/>
+                
                 <div className="mt-4 md:mt-0">
-                    <h2 className="mb-1 text-4xl tracking-tight font-extrabold text-white ">Software Developer</h2>
                     <h2 className="mb-1 text-2xl tracking-tight font-extrabold text-white ">Sonrai Security</h2>
-                    <h2 className="mb-4 text-l tracking-tight font-extrabold text-white ">January 2024 - August
-                        2024</h2>
+                    <h2 className="mb-1 text-xl tracking-tight font-extrabold text-white ">Software Developer</h2>
+                    <h2 className="mb-4 text-m tracking-tight font-extrabold text-white ">January 2024 - August 2024</h2>
                     <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
                         <li>
                             Developed and maintained a cloud security platform.
@@ -36,16 +36,16 @@ function Experience() {
                             GCP costs.
                         </li>
                     </ul>
-
                 </div>
+                <img className="mt-5 w-3/5 hidden dark:block" src="sonrai.png" alt="dashboard image"/>
             </div>
 
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <div className="mt-4 md:mt-0">
-                    <h2 className="mb-1 text-4xl tracking-tight font-extrabold text-white ">Software Developer</h2>
                     <h2 className="mb-1 text-2xl tracking-tight font-extrabold text-white ">Irving Oil</h2>
-                    <h2 className="mb-4 text-l tracking-tight font-extrabold text-white ">May 2023 - August 2023</h2>
+                    <h2 className="mb-1 text-xl tracking-tight font-extrabold text-white ">Software Developer</h2>
+                    <h2 className="mb-4 text-m tracking-tight font-extrabold text-white ">May 2023 - August 2023</h2>
                     <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
                         <li>
                             Developed and maintained a C# Rest API.
@@ -59,7 +59,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="w-3/4 hidden dark:block" src="irving.png" alt="dashboard image"/>
+                <img className="mt-4 w-3/5 hidden dark:block" src="irving.png" alt="dashboard image"/>
             </div>
         </section>
     )
