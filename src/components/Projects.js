@@ -36,10 +36,10 @@ function Projects () {
                             Built with React & Tailwind.
                         </li>
                         <li>
-                            Updated regularly.
+                            Showcases my experience and projects.
                         </li>
                         <li>
-                            Showcases my experience and projects.
+                            Deployed with Vercel.
                         </li>
                     </ul>
 
@@ -82,10 +82,10 @@ function Projects () {
                             Built with React & Tailwind.
                         </li>
                         <li>
-                            Updated regularly.
+                            Showcases my experience and projects.
                         </li>
                         <li>
-                            Showcases my experience and projects.
+                            Deployed with Vercel.
                         </li>
                     </ul>
 
