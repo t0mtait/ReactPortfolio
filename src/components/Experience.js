@@ -17,11 +17,16 @@ function Experience() {
                     <h2 className="mb-1 text-m tracking-tight font-extrabold text-white ">Software Developer</h2>
                     <h2 className="mb-4 text-sm tracking-tight font-extrabold text-white ">January 2025 - Present</h2>
                     <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
-
+                        <li>
+                            Implemented vulnerability scanning and semantic release across the organization's projects.
+                        </li>
+                        <li>
+                            Provisioned and managed TLS certificates for client and organization domains.
+                        </li>
                     </ul>
 
                 </div>
-                <img className="w-1/2 hidden dark:block" src="verosource.png" alt="dashboard image"/>
+                <img className="w-1/2 hidden dark:block" src="verosource.png"/>
             </div>
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
@@ -43,7 +48,7 @@ function Experience() {
                         </li>
                     </ul>
                 </div>
-                <img className="mt-5 w-1/2 hidden dark:block" src="sonrai.png" alt="dashboard image"/>
+                <img className="mt-5 w-1/2 hidden dark:block" src="sonrai.png"/>
             </div>
 
             <div
@@ -65,7 +70,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="mt-4 w-2/5 hidden dark:block" src="irving.png" alt="dashboard image"/>
+                <img className="mt-4 w-2/5 hidden dark:block" src="irving.png"/>
             </div>
         </section>
     )
@@ -84,11 +89,16 @@ function Experience() {
                     <h2 className="mb-1 text-xl tracking-tight font-extrabold text-white ">Software Developer</h2>
                     <h2 className="mb-4 text-m tracking-tight font-extrabold text-white ">January 2025 - Present</h2>
                     <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
-
+                        <li>
+                            Implemented vulnerability scanning and semantic release.
+                        </li>
+                        <li>
+                            Created and automated the renewal of TLS certificates.
+                        </li>
                     </ul>
 
                 </div>
-                <img className="w-3/4 hidden dark:block" src="verosource.png" alt="dashboard image"/>
+                <img className="w-3/4 hidden dark:block" src="verosource.png"/>
             </div>
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
@@ -110,7 +120,7 @@ function Experience() {
                         </li>
                     </ul>
                 </div>
-                <img className="mt-5 w-3/5 hidden dark:block" src="sonrai.png" alt="dashboard image"/>
+                <img className="mt-5 w-3/5 hidden dark:block" src="sonrai.png"/>
             </div>
 
             <div
@@ -132,7 +142,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="mt-4 w-3/5 hidden dark:block" src="irving.png" alt="dashboard image"/>
+                <img className="mt-4 w-3/5 hidden dark:block" src="irving.png"/>
             </div>
         </section>
     )
