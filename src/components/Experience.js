@@ -23,10 +23,13 @@ function Experience() {
                         <li>
                             Provisioned and managed TLS certificates for client and organization domains.
                         </li>
+                        <li>
+                             Performed routine upgrades on our infrastructure to ensure security and performance.
+                        </li>
                     </ul>
 
                 </div>
-                <img className="w-1/2 hidden dark:block" src="verosource.png"/>
+                <img className="w-1/2 block" src="verosource.png"/>
             </div>
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
@@ -48,7 +51,7 @@ function Experience() {
                         </li>
                     </ul>
                 </div>
-                <img className="mt-5 w-1/2 hidden dark:block" src="sonrai.png"/>
+                <img className="mt-5 w-1/2 block" src="sonrai.png"/>
             </div>
 
             <div
@@ -70,7 +73,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="mt-4 w-2/5 hidden dark:block" src="irving.png"/>
+                <img className="mt-4 w-2/5 block" src="irving.png"/>
             </div>
         </section>
     )
@@ -98,7 +101,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="w-3/4 hidden dark:block" src="verosource.png"/>
+                <img className="w-3/4 block" src="verosource.png"/>
             </div>
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
@@ -120,7 +123,7 @@ function Experience() {
                         </li>
                     </ul>
                 </div>
-                <img className="mt-5 w-3/5 hidden dark:block" src="sonrai.png"/>
+                <img className="mt-5 w-3/5 block" src="sonrai.png"/>
             </div>
 
             <div
@@ -142,7 +145,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="mt-4 w-3/5 hidden dark:block" src="irving.png"/>
+                <img className="mt-4 w-3/5 block" src="irving.png"/>
             </div>
         </section>
     )
