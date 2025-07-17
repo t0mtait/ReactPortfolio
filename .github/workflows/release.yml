@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - next
 
 jobs:
   release:
@@ -31,5 +30,4 @@ jobs:
         uses: cycjimmy/semantic-release-action@v4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branches: main,next
+
