@@ -110,7 +110,7 @@ function Experience() {
                     
                     <h2 className="mb-1 text-2xl tracking-tight font-extrabold text-white ">VeroSource</h2>
                     <h2 className="mb-1 text-xl tracking-tight font-extrabold text-white ">Software Developer</h2>
-                    <h2 className="mb-4 text-m tracking-tight font-extrabold text-white ">January 2025 - Present</h2>
+                    <h2 className="mb-4 text-m tracking-tight font-extrabold text-white ">January 2025 - August 2025</h2>
                     <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
                         <li>
                             Implemented vulnerability scanning and semantic release.
