@@ -24,7 +24,7 @@ function Experience() {
                             Provisioned and managed TLS certificates for client and organization domains.
                         </li>
                         <li>
-                             Performed routine upgrades on our infrastructure to ensure security and performance.
+                             Performed infrastructure upgrades to ensure security and performance.
                         </li>
                     </ul>
 
@@ -87,7 +87,7 @@ function Experience() {
                             Designed and built our internal SharePoint site.
                         </li>
                         <li>
-                            Created  and worked with Power BI to create insightful reports.
+                            Created  and worked with Power BI reports.
                         </li>
                         
                     </ul>
@@ -117,6 +117,9 @@ function Experience() {
                         </li>
                         <li>
                             Created and automated the renewal of TLS certificates.
+                        </li>
+                        <li>
+                            Performed infrastructure upgrades to ensure security and performance.
                         </li>
                     </ul>
 
@@ -172,22 +175,19 @@ function Experience() {
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <div className="mt-4 md:mt-0">
                     <h2 className="mb-1 text-xl tracking-tight font-extrabold text-white ">Irving Oil</h2>
-                    <h2 className="mb-1 text-m tracking-tight font-extrabold text-white ">Software Developer</h2>
-                    <h2 className="mb-4 text-sm tracking-tight font-extrabold text-white ">May 2023 - August 2023</h2>
-                    <ul className="max-w-md space-y-1 text-white text-xs list-disc list-inside ">
+                    <h2 className="mb-1 text-m tracking-tight font-extrabold text-white ">IT Planning & Stewardship</h2>
+                    <h2 className="mb-4 text-sm tracking-tight font-extrabold text-white ">May 2022 - August 2022</h2>
+                    <ul className="max-w-md space-y-1 text-white list-disc list-inside ">
                         <li>
-                            Developed and maintained a C# Rest API.
+                            Designed and built our internal SharePoint site.
                         </li>
                         <li>
-                            Created and optimized SQL databases.
-                        </li>
-                        <li>
-                            Created a new customer service workflow using AWS.
+                            Created  and worked with Power BI reports.
                         </li>
                     </ul>
 
                 </div>
-                <img className="mt-4 w-2/5 block" src="irving.png"/>
+                <img className="mt-4 w-3/5 block" src="irving.png"/>
             </div>
         </section>
     )
