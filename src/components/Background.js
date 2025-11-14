@@ -3,7 +3,7 @@ import { AnimatedBackground } from 'animated-backgrounds';
 function Background() {
     return (
         <div>
-            <AnimatedBackground animationName="gradientWave" />
+            <AnimatedBackground animationName="snowFall" />
         </div>
     );
 }

@@ -55,7 +55,7 @@ function Experience() {
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <div className="mt-4 md:mt-0">
-                    <img className="mt-4 w-1/4 block" src="irving.png" alt="Irving logo"/>
+                    <img className="mt-4 w-1/4 block filter brightness-0 invert" src="irving.png" alt="Irving logo"/>
                     <h2 className="mb-1 text-sm tracking-tight font-extrabold text-white ">Software Developer</h2>
                     <h2 className="mb-4 text-sm tracking-tight font-extrabold text-white ">May 2023 - August 2023</h2>
                     <ul className="max-w-md space-y-1 text-white text-xs list-disc list-inside ">
@@ -77,7 +77,7 @@ function Experience() {
             <div
                 className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
                 <div className="mt-4 md:mt-0">
-                    <img className="mt-4 w-1/4 block" src="irving.png" alt="Irving logo"/>
+                    <img className="mt-4 w-1/4 block filter brightness-0 invert" src="irving.png" alt="Irving logo"/>
                     <h2 className="mb-1 text-sm tracking-tight font-extrabold text-white ">IT Planning & Stewardship</h2>
                     <h2 className="mb-4 text-sm tracking-tight font-extrabold text-white ">May 2022 - August 2022</h2>
                     <ul className="max-w-md space-y-1 text-white text-xs list-disc list-inside ">
@@ -166,7 +166,7 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="mt-4 w-3/5 block" src="irving.png" alt="Irving logo"/>
+                <img className="mt-4 w-3/5 block filter brightness-0 invert" src="irving.png" alt="Irving logo"/>
             </div>
 
             <div
@@ -185,7 +185,8 @@ function Experience() {
                     </ul>
 
                 </div>
-                <img className="mt-4 w-3/5 block" src="irving.png" alt="Irving logo"/>
+                {/* make the picture white */}
+                <img className="mt-4 w-3/5 block filter brightness-0 invert" src="irving.png" alt="Irving logo"/>
             </div>
         </section>
     )
