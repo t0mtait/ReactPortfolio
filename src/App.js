@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 function App() {
   return (
-      <div className="App">
+      <div className="App bg-gray-900 text-white relative overflow-x-hidden">
           <Background/>
           <Navbar/>
           <About/>
