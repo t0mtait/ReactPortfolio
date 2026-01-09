@@ -14,7 +14,7 @@ function Contact() {
                     </a>
 
                     <a
-                        href="https://www.linkedin.com/"
+                        href="https://linkedin.com/in/tom-tait"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-block px-4 py-2 rounded border border-yellow-300 text-yellow-300 hover:bg-yellow-300 hover:text-black transition-colors duration-150"
