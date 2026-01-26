@@ -21,8 +21,8 @@ function About() {
                             <box-icon name='linkedin-square' type='logo' color='#ffffff'></box-icon>
                         </a>
                     </div>
-                    <div className="mt-0 col-span-1 flex w-1/2 shadow-lg border border-yellow-300">
-                        <img src="tomtait.jpg" alt="mockup"/>
+                    <div className="mt-0 col-span-1 flex w-1/2">
+                        <img src="tomtait.png" alt="mockup"/>
                     </div>
                 </div>
                 
@@ -47,7 +47,7 @@ function About() {
                     </a>
                 </div>
                 <div className="lg:mt-0 w-1/2 col-span-2 lg:flex">
-                    <img className="rounded-lg shadow-lg w-3/5 border border-yellow-300" src="tomtait.jpg" alt="mockup"/>
+                    <img className="rounded-lg w-3/5" src="tomtait.png" alt="mockup"/>
                 </div>
             </div>
         </section>

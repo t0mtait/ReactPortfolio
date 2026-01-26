@@ -1,4 +1,3 @@
-import React from 'react';
 import { AnimatedBackground } from 'animated-backgrounds';
 function Background() {
     return (
