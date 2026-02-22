@@ -56,10 +56,12 @@ function Projects() {
                     <img 
                         src={project.image} 
                         alt={`${project.title} screenshot`}
-                        className={`w-full h-64 transition-transform duration-500 group-hover:scale-110 ${
-                            project.title === "Celtic-AI" || project.title === "CryptoPort" 
-                                ? "object-contain" 
-                                : "object-cover object-top"
+                        className={`w-full transition-transform duration-500 group-hover:scale-110 ${
+                            project.title === "Celtic-AI"
+                                ? "h-64 object-contain" 
+                                : project.title === "CryptoPort"
+                                ? "h-64 object-cover object-center"
+                                : "h-64 object-contain"
                         }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
