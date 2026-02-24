@@ -14,7 +14,8 @@ function Projects() {
                 "Users can track supplement regimen and history over time",
                 "Supports FHIR-compliant Electronic Health Record integration"
             ],
-            githubUrl: "https://github.com/t0mtait/stack-tracker"
+            githubUrl: "https://github.com/t0mtait/stack-tracker",
+            visitUrl: "https://stacktracker.tomjt.com"
         },
         {
             title: "Celtic-AI",
@@ -26,19 +27,22 @@ function Projects() {
                 "Analyzes game statistics to forecast match outcomes",
                 "Ranks team statistics by their impact on game results"
             ],
-            githubUrl: "https://github.com/t0mtait/celtic-ai"
+            githubUrl: "https://github.com/t0mtait/celtic-ai",
+            visitUrl: "https://celtic.tomjt.com"
         },
         {
-            title: "CryptoPort",
-            description: "Real-time cryptocurrency portfolio tracking application built with EJS and AWS cloud infrastructure.",
-            image: "cryptoport.png",
-            technologies: ["EJS", "AWS DynamoDB", "AWS EC2"],
+            title: "GoFilen",
+            description: "AI agent that automates file management tasks such as organization, duplication, and cleanup using natural language commands.",
+            image: "https://wallpapers.com/images/hd/coming-soon-starry-background-mr80am5zjv0g6n0l.jpg",
+            technologies: ["Go", "Natural Language Processing", "FS Automation"],
             highlights: [
-                "Monitor cryptocurrency markets in real-time",
-                "Track investment portfolios with live price updates",
-                "First end-to-end web application built with AWS services"
+                "Coming soon...",
+                "Coming soon...",
+                "Coming soon...",
+                "Coming soon...",
+                "Coming soon...",
             ],
-            githubUrl: "https://github.com/t0mtait/cryptoport"
+            githubUrl: "https://github.com/t0mtait/gofilen"
         }
     ];
 
@@ -100,8 +104,8 @@ function Projects() {
                         ))}
                     </ul>
 
-                    {/* GitHub Link */}
-                    <div className="pt-2">
+                    {/* Project Links */}
+                    <div className="pt-2 flex gap-3">
                         <a 
                             href={project.githubUrl} 
                             target="_blank" 
@@ -111,6 +115,16 @@ function Projects() {
                             <GitHubIcon />
                             <span>View on GitHub</span>
                         </a>
+                        {project.visitUrl && (
+                            <a 
+                                href={project.visitUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-900 dark:text-white bg-indigo-100 dark:bg-indigo-500/20 border border-indigo-300 dark:border-indigo-500/30 rounded-lg hover:bg-indigo-600 hover:text-white hover:border-indigo-600 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            >
+                                <span>Visit Site</span>
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>
