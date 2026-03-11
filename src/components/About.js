@@ -28,8 +28,7 @@ function About() {
                             Software Developer & Problem Solver
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
-                            Passionate about building solutions to complex problems. 
-                            Let's connect and build something amazing together.
+                            Passionate about learning modern technologies and building solutions to complex problems. 
                         </p>
 
                         {/* Social Links */}
@@ -75,9 +74,7 @@ function About() {
                             </div>
                             
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-                                Passionate about building elegant solutions to complex problems. 
-                                I specialize in creating responsive web applications with modern technologies 
-                                and best practices. Let's connect and build something amazing together.
+                                Passionate about learning modern technologies and building solutions to complex problems. 
                             </p>
 
                             {/* Social Links */}
