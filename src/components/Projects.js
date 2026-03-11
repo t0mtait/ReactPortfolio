@@ -6,41 +6,39 @@ function Projects() {
     const projects = [
         {
             title: "Stack Tracker",
-            description: "A comprehensive health tracking application that enables users to monitor their supplement regimen and maintain detailed health history.",
+            description: "Health tracking application allowing users to monitor and share their supplement regimen.",
             image: "stacktracker.png",
             technologies: ["React", "HAPI-FHIR", "PostgreSQL"],
             highlights: [
-                "Full-stack application with React frontend and PostgreSQL database",
-                "Users can track supplement regimen and history over time",
-                "Supports FHIR-compliant Electronic Health Record integration"
+                "Full-stack with React and PostgreSQL",
+                "Explore, track, and share supplements",
+                "FHIR-compliant EHR integration"
             ],
             githubUrl: "https://github.com/t0mtait/stack-tracker",
             visitUrl: "https://stacktracker.tomjt.com"
         },
         {
             title: "Celtic-AI",
-            description: "Machine learning project that leverages team statistics to predict Boston Celtics game outcomes with data-driven insights.",
+            description: "ML project using historical team statistics to predict Celtics game outcomes.",
             image: "celticai.png",
             technologies: ["Python", "Machine Learning", "Data Analysis"],
             highlights: [
-                "Predictive model using statistical analysis and machine learning",
-                "Analyzes game statistics to forecast match outcomes",
-                "Ranks team statistics by their impact on game results"
+                "Predictive model using stat. analysis and ML",
+                "Analyze statistics to forecast outcomes",
+                "Ranks statistics by impact on game results"
             ],
             githubUrl: "https://github.com/t0mtait/celtic-ai",
             visitUrl: "https://celtic.tomjt.com"
         },
         {
             title: "GoFilen",
-            description: "AI agent that automates file management tasks such as organization, duplication, and cleanup using natural language commands.",
-            image: "https://wallpapers.com/images/hd/coming-soon-starry-background-mr80am5zjv0g6n0l.jpg",
-            technologies: ["Go", "Natural Language Processing", "FS Automation"],
+            description: "AI agent that automates file management tasks using natural language commands.",
+            image: "gofilen.jpg",
+            technologies: ["Go", "Natural Language Processing", "AI Agents"],
             highlights: [
-                "Coming soon...",
-                "Coming soon...",
-                "Coming soon...",
-                "Coming soon...",
-                "Coming soon...",
+                "LLM-powered agent for file management",
+                "Targets on-system Filen network mount",
+                "Ran locally via Ollama to ensure privacy"
             ],
             githubUrl: "https://github.com/t0mtait/gofilen"
         }
