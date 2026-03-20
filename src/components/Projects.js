@@ -5,17 +5,16 @@ function Projects() {
 
     const projects = [
         {
-            title: "Stack Tracker",
-            description: "Health tracking application allowing users to monitor and share their supplement regimen.",
-            image: "stacktracker.png",
+            title: "SupplementDB",
+            description: "Web application allowing users to monitor their supplement regimen.",
+            image: "supplementdb.png",
             technologies: ["React", "HAPI-FHIR", "PostgreSQL"],
             highlights: [
-                "Full-stack with React and PostgreSQL",
+                "Full-stack with React and MongoDB",
                 "Explore, track, and share supplements",
-                "FHIR-compliant EHR integration"
+                "HAPI-FHIR server for EHR integration"
             ],
-            githubUrl: "https://github.com/t0mtait/stack-tracker",
-            visitUrl: "https://stacktracker.tomjt.com"
+            visitUrl: "https://supplementdb.app"
         },
         {
             title: "Celtic-AI",
@@ -61,6 +60,8 @@ function Projects() {
                         className={`w-full transition-transform duration-500 group-hover:scale-110 ${
                             project.title === "Celtic-AI"
                                 ? "h-64 object-contain" 
+                                : project.title === "SupplementDB"
+                                ? "h-64 object-cover object-center scale-y-105"
                                 : project.title === "CryptoPort"
                                 ? "h-64 object-cover object-center"
                                 : "h-64 object-contain"
@@ -104,15 +105,17 @@ function Projects() {
 
                     {/* Project Links */}
                     <div className="pt-2 flex gap-3">
-                        <a 
-                            href={project.githubUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-900 dark:text-white bg-gray-100 dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-indigo-600 hover:text-white hover:border-indigo-600 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 transition-all duration-300 shadow-lg hover:shadow-xl"
-                        >
-                            <GitHubIcon />
-                            <span>View on GitHub</span>
-                        </a>
+                        {project.githubUrl && (
+                            <a 
+                                href={project.githubUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-gray-900 dark:text-white bg-gray-100 dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-indigo-600 hover:text-white hover:border-indigo-600 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                            >
+                                <GitHubIcon />
+                                <span>View on GitHub</span>
+                            </a>
+                        )}
                         {project.visitUrl && (
                             <a 
                                 href={project.visitUrl} 
@@ -130,7 +133,7 @@ function Projects() {
     );
 
     return (
-        <section className="bg-transparent py-12 px-4" id="projects">
+        <section className="scroll-mt-24 bg-transparent py-12 px-4" id="projects">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
