@@ -69,7 +69,7 @@ function Contact() {
     );
 
     return (
-        <section id="contact" className="bg-transparent py-12 px-4">
+        <section id="contact" className="scroll-mt-24 bg-transparent py-12 px-4">
             <div className="max-w-5xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
@@ -78,7 +78,7 @@ function Contact() {
                     </h1>
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-600 dark:via-indigo-400 to-transparent mx-auto mb-6"></div>
                     <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                        I'm always open to new opportunities, collaborations, and interesting conversations. 
+                        I'm always open to new opportunities and conversations. 
                         Feel free to reach out through any of the channels below!
                     </p>
                 </div>

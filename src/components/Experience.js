@@ -108,7 +108,7 @@ function Experience() {
     );
 
     return (
-        <section className="bg-transparent py-12 px-4" id="experience">
+        <section className="scroll-mt-24 bg-transparent py-12 px-4" id="experience">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">

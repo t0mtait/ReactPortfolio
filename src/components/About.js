@@ -6,7 +6,7 @@ function About() {
 
     if (isMobile) {
         return (
-            <section className="bg-transparent py-12 px-4">
+            <section id="about" className="scroll-mt-24 bg-transparent py-12 px-4">
                 <div className="max-w-4xl mx-auto">
                     {/* Profile Image */}
                     <div className="flex justify-center mb-8">
@@ -59,7 +59,7 @@ function About() {
     }
     else {
         return (
-            <section className="bg-transparent py-16">
+            <section id="about" className="scroll-mt-24 bg-transparent py-16">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Content */}
