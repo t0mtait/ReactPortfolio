@@ -25,10 +25,10 @@ function About() {
                             Hi, I'm Tom!
                         </h1>
                         <h2 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
-                            Software Developer & Problem Solver
+                            Full-Stack Developer & CS Student
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
-                            Passionate about learning modern technologies and building solutions to complex problems. 
+                            Final-year CS student at UNB with four co-op terms. I build full-stack apps, automate infrastructure, and apply ML to real problems. Currently exploring AI agents.
                         </p>
 
                         {/* Social Links */}
@@ -69,12 +69,14 @@ function About() {
                                     Hi, I'm Tom!
                                 </h1>
                                 <h2 className="text-2xl xl:text-3xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
-                                    Software Developer & Problem Solver
+                                    Full-Stack Developer & CS Student
                                 </h2>
                             </div>
                             
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-                                Passionate about learning modern technologies and building solutions to complex problems. 
+                                Final-year Computer Science student at UNB with hands-on experience from four software development co-op terms. 
+                                I enjoy building full-stack applications, automating infrastructure, and applying machine learning to solve real problems. 
+                                Currently exploring AI agents and cloud-native architectures.
                             </p>
 
                             {/* Social Links */}
