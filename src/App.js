@@ -1,7 +1,9 @@
 import './App.css';
 import Navbar from './components/Navbar'
 import About from "./components/About";
+import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import { ThemeProvider } from './contexts/ThemeContext';
@@ -22,12 +24,18 @@ function App() {
                       <About/>
                   </div>
                   <div className="section-animate section-delay-2">
-                      <Experience/>
+                      <Skills/>
                   </div>
                   <div className="section-animate section-delay-3">
-                      <Projects />
+                      <Experience/>
                   </div>
                   <div className="section-animate section-delay-4">
+                      <Education/>
+                  </div>
+                  <div className="section-animate section-delay-5">
+                      <Projects />
+                  </div>
+                  <div className="section-animate section-delay-6">
                       <Contact />
                   </div>
               </div>
