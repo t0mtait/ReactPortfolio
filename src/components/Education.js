@@ -10,16 +10,17 @@ function Education() {
         logo: "unb.png",
         highlights: [
             "Expected graduation: May 2026",
-            "Dean's List achiever",
+            "4x Dean's List",
             "Focus on software engineering and systems"
         ],
         courses: [
             "Data Structures & Algorithms",
-            "Database Systems",
             "Operating Systems",
-            "Software Engineering",
             "Computer Networks",
-            "Machine Learning"
+            "Machine Learning",
+            "Technology Entrepreneurship",
+            "Big Data",
+            "Data Mining"
         ]
     };
 

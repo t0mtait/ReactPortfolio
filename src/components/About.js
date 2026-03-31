@@ -28,7 +28,7 @@ function About() {
                             Full-Stack Developer & CS Student
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
-                            Final-year CS student at UNB with four co-op terms. I build full-stack apps, automate infrastructure, and apply ML to real problems. Currently exploring AI agents.
+                            Final-year CS student at UNB with 24 months of professional experience. I build full-stack apps, automate infrastructure, and apply ML to real problems.
                         </p>
 
                         {/* Social Links */}
@@ -74,9 +74,8 @@ function About() {
                             </div>
                             
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-                                Final-year Computer Science student at UNB with hands-on experience from four software development co-op terms. 
-                                I enjoy building full-stack applications, automating infrastructure, and applying machine learning to solve real problems. 
-                                Currently exploring AI agents and cloud-native architectures.
+                                Final-year Computer Science student at UNB with 24 months of professional experience.
+                                I enjoy building full-stack applications, automating infrastructure, and applying machine learning to solve real problems.
                             </p>
 
                             {/* Social Links */}

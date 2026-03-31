@@ -5,18 +5,6 @@ function Projects() {
 
     const projects = [
         {
-            title: "CryptoPort",
-            description: "Real-time cryptocurrency portfolio tracker with live price updates and performance analytics.",
-            image: "cryptoport.png",
-            technologies: ["React", "Node.js", "REST APIs", "Tailwind CSS"],
-            highlights: [
-                "Real-time price tracking for multiple cryptocurrencies",
-                "Portfolio performance charts and analytics",
-                "Clean, modern dashboard interface"
-            ],
-            githubUrl: "https://github.com/t0mtait/cryptoPort"
-        },
-        {
             title: "SupplementDB",
             description: "Web application allowing users to monitor their supplement regimen.",
             image: "supplementdb.png",
