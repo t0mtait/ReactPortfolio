@@ -1,7 +1,4 @@
-import { useMediaQuery } from 'react-responsive'
-
 function Education() {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
 
     const education = {
         institution: "University of New Brunswick",

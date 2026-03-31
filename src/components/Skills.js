@@ -1,7 +1,4 @@
-import { useMediaQuery } from 'react-responsive'
-
 function Skills() {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
 
     const SkillBadge = ({ skill, colorClasses }) => (
         <span className={`px-4 py-2 text-sm font-medium text-white dark:text-gray-900 rounded-lg hover:scale-105 transition-all duration-200 ${colorClasses}`}>
