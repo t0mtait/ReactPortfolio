@@ -21,14 +21,22 @@ code {
     monospace;
 }
 
-/* Smooth transitions for theme changes */
-* {
+/* Smooth transitions for theme changes - target common elements */
+body, section, article, aside,
+header, footer, nav, main,
+div, span,
+h1, h2, h3, h4, h5, h6,
+p, a, button, input, textarea, select,
+ul, ol, li, dl, dt, dd,
+table, thead, tbody, tr, th, td,
+img, svg, canvas,
+.card, .navbar, .modal, .dropdown {
   transition-property: background-color, border-color, color;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
 }
 
-/* Override for elements that shouldn't transition */
+/* Override for elements that need full transitions */
 button, a, .no-transition {
   transition-property: all;
 }

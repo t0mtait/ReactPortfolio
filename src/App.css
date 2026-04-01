@@ -54,6 +54,8 @@
 .section-delay-2 { animation-delay: 220ms; }
 .section-delay-3 { animation-delay: 310ms; }
 .section-delay-4 { animation-delay: 400ms; }
+.section-delay-5 { animation-delay: 490ms; }
+.section-delay-6 { animation-delay: 580ms; }
 
 @keyframes orbDrift {
 	0%, 100% {
