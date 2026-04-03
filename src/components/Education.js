@@ -4,7 +4,6 @@ function Education() {
         institution: "University of New Brunswick",
         degree: "Bachelor of Computer Science",
         period: "2022 - 2026",
-        logo: "unb.png",
         highlights: [
             "Expected graduation: May 2026",
             "4x Dean's List",
