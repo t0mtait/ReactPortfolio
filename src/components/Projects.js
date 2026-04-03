@@ -14,7 +14,7 @@ function Projects() {
                 "Explore, track, and share supplements",
                 "HAPI-FHIR server for EHR integration"
             ],
-            visitUrl: "https://supplementdb.app"
+            visitUrl: "https://t0mtait.github.io/maintenance/"
         },
         {
             title: "Celtic-AI",
@@ -27,7 +27,7 @@ function Projects() {
                 "Ranks statistics by impact on game results"
             ],
             githubUrl: "https://github.com/t0mtait/celtic-ai",
-            visitUrl: "https://celtic.tomjt.com"
+            visitUrl: "https://t0mtait.github.io/maintenance/"
         },
         {
             title: "GoFilen",
