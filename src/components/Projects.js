@@ -49,7 +49,7 @@ function Projects() {
         </svg>
     );
 
-    const ProjectCard = ({ project, index }) => (
+    const ProjectCard = ({ project }) => (
         <div className="group">
             <div className="bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden hover:bg-gray-50 dark:hover:bg-white/10 hover:border-indigo-400 dark:hover:border-indigo-400/30 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.02]">
                 {/* Project Image */}
@@ -62,8 +62,6 @@ function Projects() {
                                 ? "h-64 object-contain" 
                                 : project.title === "SupplementDB"
                                 ? "h-64 object-cover object-center scale-y-105"
-                                : project.title === "CryptoPort"
-                                ? "h-64 object-cover object-center"
                                 : "h-64 object-contain"
                         }`}
                     />
@@ -149,10 +147,9 @@ function Projects() {
                 {/* Projects Grid */}
                 <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
                     {projects.map((project, index) => (
-                        <ProjectCard 
-                            key={index} 
-                            project={project} 
-                            index={index}
+                        <ProjectCard
+                            key={index}
+                            project={project}
                         />
                     ))}
                 </div>
