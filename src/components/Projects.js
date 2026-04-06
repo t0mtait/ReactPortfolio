@@ -14,7 +14,7 @@ function Projects() {
                 "Explore, track, and share supplements",
                 "HAPI-FHIR server for EHR integration"
             ],
-            visitUrl: "https://t0mtait.github.io/maintenance/"
+            visitUrl: "https://supplementdb.app"
         },
         {
             title: "Celtic-AI",
