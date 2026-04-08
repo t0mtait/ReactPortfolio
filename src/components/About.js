@@ -39,7 +39,7 @@ function About() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <i class='bx bxl-github' style={{color: 'currentColor'}}></i>
+                                <i className='bx bxl-github' style={{color: 'currentColor'}}></i>
                                 <span>GitHub</span>
                             </a>
                             <a
@@ -48,7 +48,7 @@ function About() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <i class='bx bxl-linkedin-square' style={{color: 'currentColor'}}></i>
+                                <i className='bx bxl-linkedin-square' style={{color: 'currentColor'}}></i>
                                 <span>LinkedIn</span>
                             </a>
                         </div>
@@ -86,7 +86,7 @@ function About() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <i class='bx bxl-github' style={{color: 'currentColor'}}></i>
+                                    <i className='bx bxl-github' style={{color: 'currentColor'}}></i>
                                     <span>GitHub</span>
                                 </a>
                                 <a
@@ -95,7 +95,7 @@ function About() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <i class='bx bxl-linkedin-square' style={{color: 'currentColor'}}></i>
+                                    <i className='bx bxl-linkedin-square' style={{color: 'currentColor'}}></i>
                                     <span>LinkedIn</span>
                                 </a>
                             </div>
