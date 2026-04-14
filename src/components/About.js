@@ -33,22 +33,22 @@ function About() {
 
                         {/* Social Links */}
                         <div className="flex justify-center gap-4 flex-wrap">
-                            <a 
+                            <a
                                 href="https://github.com/t0mtait"
                                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <box-icon name='github' type='logo' color='currentColor' size='20px'></box-icon>
+                                <i className='bx bxl-github' style={{color: 'currentColor'}}></i>
                                 <span>GitHub</span>
                             </a>
-                            <a 
+                            <a
                                 href="https://www.linkedin.com/in/tom-tait/"
                                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <box-icon name='linkedin-square' type='logo' color='currentColor' size='20px'></box-icon>
+                                <i className='bx bxl-linkedin-square' style={{color: 'currentColor'}}></i>
                                 <span>LinkedIn</span>
                             </a>
                         </div>
@@ -80,22 +80,22 @@ function About() {
 
                             {/* Social Links */}
                             <div className="flex gap-4 pt-4">
-                                <a 
+                                <a
                                     href="https://github.com/t0mtait"
                                     className="inline-flex items-center gap-3 px-8 py-3.5 text-base font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <box-icon name='github' type='logo' color='currentColor' size='24px'></box-icon>
+                                    <i className='bx bxl-github' style={{color: 'currentColor'}}></i>
                                     <span>GitHub</span>
                                 </a>
-                                <a 
+                                <a
                                     href="https://www.linkedin.com/in/tom-tait/"
                                     className="inline-flex items-center gap-3 px-8 py-3.5 text-base font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <box-icon name='linkedin-square' type='logo' color='currentColor' size='24px'></box-icon>
+                                    <i className='bx bxl-linkedin-square' style={{color: 'currentColor'}}></i>
                                     <span>LinkedIn</span>
                                 </a>
                             </div>
