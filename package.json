@@ -12,7 +12,7 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
     "boxicons": "^2.1.4",
-    "caniuse-lite": "^1.0.30001788",
+    "caniuse-lite": "^1.0.30001600",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.1",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm cache clean --force && rm -rf build && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
