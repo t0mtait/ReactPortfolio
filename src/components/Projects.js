@@ -17,8 +17,8 @@ function Projects() {
             visitUrl: "https://supplementdb.app"
         },
         {
-            title: "Celtic-AI",
-            description: "ML project using historical team statistics to predict Celtics game outcomes.",
+            title: "NBA-AI",
+            description: "ML project using historical team statistics to predict NBA game outcomes.",
             image: "celticai.png",
             technologies: ["Python", "Machine Learning", "Data Analysis"],
             highlights: [
@@ -26,8 +26,8 @@ function Projects() {
                 "Analyze statistics to forecast outcomes",
                 "Ranks statistics by impact on game results"
             ],
-            githubUrl: "https://github.com/t0mtait/celtic-ai",
-            visitUrl: "https://t0mtait.github.io/maintenance/"
+            githubUrl: "https://github.com/t0mtait/nba-ai",
+            visitUrl: "https://nba.tomjt.com"
         },
         {
             title: "GoFilen",
