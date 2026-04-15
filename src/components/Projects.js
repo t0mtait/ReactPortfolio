@@ -19,7 +19,7 @@ function Projects() {
         {
             title: "NBA-AI",
             description: "ML project using historical team statistics to predict NBA game outcomes.",
-            image: "celticai.png",
+            image: "nbaai.png",
             technologies: ["Python", "Machine Learning", "Data Analysis"],
             highlights: [
                 "Predictive model using stat. analysis and ML",
