@@ -35,11 +35,13 @@ function Contact() {
         }
     ];
 
-    const ContactCard = ({ method }) => (
+    const ContactCard = ({ method }) => {
+        const isExternal = method.link.startsWith('http') || method.link.startsWith('mailto:');
+        return (
         <a
             href={method.link}
-            target={method.link.startsWith('http') ? '_blank' : undefined}
-            rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+            target={isExternal ? '_blank' : undefined}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
             className="group block"
         >
             <div className="bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-xl p-6 hover:bg-gray-50 dark:hover:bg-white/10 hover:border-indigo-500 dark:hover:border-indigo-400/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
@@ -66,7 +68,8 @@ function Contact() {
                 </div>
             </div>
         </a>
-    );
+        );
+    };
 
     return (
         <section id="contact" className="scroll-mt-24 bg-transparent py-12 px-4">

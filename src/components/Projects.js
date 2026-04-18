@@ -10,7 +10,7 @@ function Projects() {
             image: "supplementdb.png",
             technologies: ["React", "HAPI-FHIR", "PostgreSQL"],
             highlights: [
-                "Full-stack with React and MongoDB",
+                "Full-stack with React and PostgreSQL",
                 "Explore, track, and share supplements",
                 "HAPI-FHIR server for EHR integration"
             ],
