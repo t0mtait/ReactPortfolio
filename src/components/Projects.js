@@ -10,7 +10,7 @@ function Projects() {
             image: "supplementdb.png",
             technologies: ["React", "HAPI-FHIR", "PostgreSQL"],
             highlights: [
-                "Full-stack with React and MongoDB",
+                "Full-stack with React and PostgreSQL",
                 "Explore, track, and share supplements",
                 "HAPI-FHIR server for EHR integration"
             ],
@@ -27,7 +27,7 @@ function Projects() {
                 "Ranks statistics by impact on game results"
             ],
             githubUrl: "https://github.com/t0mtait/nba-ai",
-            visitUrl: "https://nba.tomjt.com"
+            visitUrl: "https://t0mtait.github.io/maintenance/"
         },
         {
             title: "GoFilen",
