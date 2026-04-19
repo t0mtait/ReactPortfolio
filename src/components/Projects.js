@@ -58,9 +58,7 @@ function Projects() {
                         src={project.image} 
                         alt={`${project.title} screenshot`}
                         className={`w-full transition-transform duration-500 group-hover:scale-110 ${
-                            project.title === "Celtic-AI"
-                                ? "h-64 object-contain" 
-                                : project.title === "SupplementDB"
+                            project.title === "SupplementDB"
                                 ? "h-64 object-cover object-center scale-y-105"
                                 : "h-64 object-contain"
                         }`}
