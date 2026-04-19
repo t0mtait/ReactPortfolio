@@ -57,10 +57,10 @@ function Projects() {
                     <img 
                         src={project.image} 
                         alt={`${project.title} screenshot`}
-                        className={`w-full h-64 object-contain transition-transform duration-500 group-hover:scale-110 ${
+                        className={`w-full transition-transform duration-500 group-hover:scale-110 ${
                             project.title === "SupplementDB"
-                                ? "object-cover object-center scale-y-105"
-                                : ""
+                                ? "h-64 object-cover object-center scale-y-105"
+                                : "h-64 object-contain"
                         }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
