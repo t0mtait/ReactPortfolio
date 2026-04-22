@@ -35,8 +35,13 @@ function Contact() {
         }
     ];
 
+    const isExternalLink = (href) => {
+        if (!href) return false;
+        return href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+    };
+
     const ContactCard = ({ method }) => {
-        const isExternal = method.link.startsWith('http') || method.link.startsWith('mailto:');
+        const isExternal = isExternalLink(method.link);
         return (
         <a
             href={method.link}
@@ -76,9 +81,9 @@ function Contact() {
             <div className="max-w-5xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
                         Get In Touch
-                    </h1>
+                    </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-600 dark:via-indigo-400 to-transparent mx-auto mb-6"></div>
                     <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         I'm always open to new opportunities and conversations. 
