@@ -27,7 +27,7 @@ function Projects() {
                 "Ranks statistics by impact on game results"
             ],
             githubUrl: "https://github.com/t0mtait/nba-ai",
-            visitUrl: "https://nba.tomjt.com"
+            visitUrl: "https://t0mtait.github.io/maintenance/"
         },
         {
             title: "GoFilen",
