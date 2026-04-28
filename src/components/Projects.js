@@ -144,9 +144,9 @@ function Projects() {
 
                 {/* Projects Grid */}
                 <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
-                    {projects.map((project, index) => (
+                    {projects.map((project) => (
                         <ProjectCard
-                            key={index}
+                            key={project.title}
                             project={project}
                         />
                     ))}
