@@ -58,8 +58,10 @@ function Projects() {
                         alt={`${project.title} screenshot`}
                         className={`w-full transition-transform duration-500 group-hover:scale-110 ${
                             project.title === "SupplementDB"
-                                ? "h-64 object-cover object-center scale-y-105"
-                                : "h-64 object-contain"
+                                ? "h-64 object-fill object-center"
+                                : project.title === "NBA-AI"
+                                    ? "h-64 object-cover object-top"
+                                    : "h-64 object-contain"
                         }`}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
