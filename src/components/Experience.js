@@ -122,7 +122,7 @@ function Experience() {
                 <div className="space-y-8">
                     {experiences.map((experience, index) => (
                         <ExperienceCard 
-                            key={index} 
+                            key={experience.company + experience.role} 
                             experience={experience} 
                             index={index}
                         />
