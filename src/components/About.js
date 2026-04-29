@@ -2,9 +2,9 @@ import { useMediaQuery } from 'react-responsive'
 
 
 function About() {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
+    const isMediumOrSmaller = useMediaQuery({ maxWidth: 1024 })
 
-    if (isMobile) {
+    if (isMediumOrSmaller) {
         return (
             <section id="about" className="scroll-mt-24 bg-transparent py-12 px-4">
                 <div className="max-w-4xl mx-auto">
@@ -14,7 +14,7 @@ function About() {
                             <img 
                                 src="tomtait.png" 
                                 alt="Tom Tait" 
-                                className="rounded-full w-40 h-40 object-cover border-4 border-indigo-200 dark:border-indigo-500/30 shadow-xl"
+                                className="rounded-full w-48 h-48 object-cover border-4 border-indigo-200 dark:border-indigo-500/30 shadow-xl"
                             />
                         </div>
                     </div>
@@ -61,25 +61,25 @@ function About() {
         return (
             <section id="about" className="scroll-mt-24 bg-transparent py-16">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center md:flex md:flex-col md:items-center">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Content */}
-                        <div className="space-y-6 md:text-center md:flex md:flex-col md:items-center">
+                        <div className="space-y-6">
                             <div>
-                                <h1 className="text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4 leading-tight md:text-center">
+                                <h1 className="text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4 leading-tight">
                                     Hi, I'm Tom!
                                 </h1>
-                                <h2 className="text-2xl xl:text-3xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6 md:text-center">
+                                <h2 className="text-2xl xl:text-3xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
                                     Full-Stack Developer & CS Student
                                 </h2>
                             </div>
                             
-                            <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl md:text-center">
+                            <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
                                 Final-year Computer Science student at UNB with 24 months of professional experience.
                                 I enjoy building full-stack applications, automating infrastructure, and applying machine learning to solve real problems.
                             </p>
 
                             {/* Social Links */}
-                            <div className="flex gap-4 pt-4 md:justify-center">
+                            <div className="flex gap-4 pt-4">
                                 <a
                                     href="https://github.com/t0mtait"
                                     className="inline-flex items-center gap-3 px-8 py-3.5 text-base font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
@@ -102,12 +102,12 @@ function About() {
                         </div>
 
                         {/* Right Image */}
-                        <div className="flex justify-center lg:justify-end md:mt-8">
+                        <div className="flex justify-center lg:justify-end">
                             <div className="relative">
                                 <img 
                                     src="tomtait.png" 
                                     alt="Tom Tait" 
-                                    className="rounded-2xl w-full max-w-md shadow-2xl border border-gray-300 dark:border-white/10 hover:scale-105 transition-transform duration-300 md:max-w-sm"
+                                    className="rounded-2xl w-full max-w-md shadow-2xl border border-gray-300 dark:border-white/10 hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
                         </div>
