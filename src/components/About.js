@@ -60,7 +60,7 @@ function About() {
     else {
         return (
             <section id="about" className="scroll-mt-24 bg-transparent py-16">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-6 lg:px-8 md:text-center md:items-center lg:text-left lg:items-start">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* Left Content */}
                         <div className="space-y-6">
