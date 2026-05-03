@@ -25,10 +25,10 @@ function About() {
                             Hi, I'm Tom!
                         </h1>
                         <h2 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
-                            Full-Stack Developer & CS Student
+                            Full-Stack Developer & CS Graduate
                         </h2>
                         <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed mb-8 max-w-2xl mx-auto">
-                            Final-year CS student at UNB with 24 months of professional experience. I build full-stack apps, automate infrastructure, and apply ML to real problems.
+                            UNB Computer Science graduate with 24 months of professional experience. I build full-stack apps, automate infrastructure, and apply ML to real problems.
                         </p>
 
                         {/* Social Links */}
@@ -69,12 +69,12 @@ function About() {
                                     Hi, I'm Tom!
                                 </h1>
                                 <h2 className="text-2xl xl:text-3xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
-                                    Full-Stack Developer & CS Student
+                                    Full-Stack Developer & CS Graduate
                                 </h2>
                             </div>
                             
                             <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-                                Final-year Computer Science student at UNB with 24 months of professional experience.
+                                UNB Computer Science graduate with 24 months of professional experience.
                                 I enjoy building full-stack applications, automating infrastructure, and applying machine learning to solve real problems.
                             </p>
 
