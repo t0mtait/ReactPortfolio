@@ -19,9 +19,9 @@ function Skills() {
             <div className="max-w-5xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
                         Skills
-                    </h2>
+                    </h1>
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-600 dark:via-indigo-400 to-transparent mx-auto mb-4"></div>
                     <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
                         Technologies and tools I work with
