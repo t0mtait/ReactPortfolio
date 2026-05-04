@@ -21,7 +21,7 @@ function About() {
 
                     {/* Content */}
                     <div className="text-center">
-                        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3">
                             Hi, I'm Tom!
                         </h1>
                         <h2 className="text-xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
