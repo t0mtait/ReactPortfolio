@@ -14,5 +14,7 @@ root.render(
 
 // Log web vitals in development only
 if (process.env.NODE_ENV === 'development') {
-  reportWebVitals(console.log);
+  reportWebVitals((metric) => {
+    console.log(metric);
+  });
 }
