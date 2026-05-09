@@ -3,22 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^13.0.1",
-    "@semantic-release/github": "^11.0.3",
-    "@semantic-release/npm": "^12.0.2",
-    "@semantic-release/release-notes-generator": "^14.0.3",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/user-event": "^13.5.0",
     "boxicons": "^2.1.4",
-    "caniuse-lite": "^1.0.30001600",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.1",
     "react-scripts": "5.0.1",
-    "semantic-release": "^24.2.7",
-    "underscore": "^1.13.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -46,10 +35,19 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/plugin-transform-private-property-in-object": "^7.25.9",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/github": "^11.0.3",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
+    "semantic-release": "^24.2.7",
     "tailwindcss": "^3.4.14"
   },
   "release": {
