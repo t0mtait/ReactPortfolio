@@ -1,3 +1,39 @@
+const ContactCard = ({ method }) => {
+    const isExternal = method.link.startsWith('http') || method.link.startsWith('mailto:');
+    return (
+        <a
+            href={method.link}
+            target={isExternal ? '_blank' : undefined}
+            rel={isExternal ? 'noopener noreferrer' : undefined}
+            className="group block"
+        >
+            <div className="bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-xl p-6 hover:bg-gray-50 dark:hover:bg-white/10 hover:border-indigo-500 dark:hover:border-indigo-400/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
+                <div className="flex flex-col items-center text-center space-y-4">
+                    {/* Icon */}
+                    <div className="text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300">
+                        {method.icon}
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {method.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {method.description}
+                    </p>
+
+                    {/* Value */}
+                    <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors">
+                        {method.value}
+                    </p>
+                </div>
+            </div>
+        </a>
+    );
+};
+
 function Contact() {
     const contactMethods = [
         {
@@ -34,42 +70,6 @@ function Contact() {
             )
         }
     ];
-
-    const ContactCard = ({ method }) => {
-        const isExternal = method.link.startsWith('http') || method.link.startsWith('mailto:');
-        return (
-        <a
-            href={method.link}
-            target={isExternal ? '_blank' : undefined}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
-            className="group block"
-        >
-            <div className="bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-xl p-6 hover:bg-gray-50 dark:hover:bg-white/10 hover:border-indigo-500 dark:hover:border-indigo-400/50 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
-                <div className="flex flex-col items-center text-center space-y-4">
-                    {/* Icon */}
-                    <div className="text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300">
-                        {method.icon}
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                        {method.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                        {method.description}
-                    </p>
-
-                    {/* Value */}
-                    <p className="text-sm font-medium text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300 transition-colors">
-                        {method.value}
-                    </p>
-                </div>
-            </div>
-        </a>
-        );
-    };
 
     return (
         <section id="contact" className="scroll-mt-24 bg-transparent py-12 px-4">
