@@ -54,8 +54,8 @@ function Projects() {
             <div className="bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-xl overflow-hidden hover:bg-gray-50 dark:hover:bg-white/10 hover:border-indigo-400 dark:hover:border-indigo-400/30 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.02]">
                 {/* Project Image */}
                 <div className="relative overflow-hidden bg-gray-900">
-                    <img 
-                        src={project.image} 
+                    <img
+                        src={project.image}
                         alt={`${project.title} screenshot`}
                         className={`w-full transition-transform duration-500 group-hover:scale-110 ${
                             project.title === "SupplementDB"

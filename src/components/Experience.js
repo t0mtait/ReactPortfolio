@@ -71,8 +71,8 @@ function Experience() {
                     {/* Logo */}
                     <div className={`flex-shrink-0 ${isMobile ? 'w-full flex justify-center mb-2' : ''}`}>
                         <div className="bg-gray-900 dark:bg-gray-800 p-4 rounded-lg border border-gray-300 dark:border-transparent">
-                            <img 
-                                src={experience.logo} 
+                            <img
+                                src={experience.logo}
                                 alt={`${experience.company} logo`}
                                 className={experience.logoClasses}
                             />
