@@ -1,10 +1,10 @@
-function Skills() {
+const SkillBadge = ({ skill, colorClasses }) => (
+    <span className={`px-4 py-2 text-sm font-medium text-white dark:text-gray-900 rounded-lg hover:scale-105 transition-all duration-200 ${colorClasses}`}>
+        {skill}
+    </span>
+);
 
-    const SkillBadge = ({ skill, colorClasses }) => (
-        <span className={`px-4 py-2 text-sm font-medium text-white dark:text-gray-900 rounded-lg hover:scale-105 transition-all duration-200 ${colorClasses}`}>
-            {skill}
-        </span>
-    );
+function Skills() {
 
     const skills = {
         languages: { label: "Languages", color: "bg-indigo-500 dark:bg-indigo-400 hover:bg-indigo-600 dark:hover:bg-indigo-300", dot: "bg-indigo-500 dark:bg-indigo-400", items: ["TypeScript", "Python", "Go", "Java", "C#", "SQL", "Bash"] },
