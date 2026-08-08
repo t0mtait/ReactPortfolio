@@ -37,8 +37,8 @@ function Navbar() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-2">
                         <ul className="flex items-center space-x-1">
-                            {navLinks.map((link, index) => (
-                                <li key={index}>
+                            {navLinks.map((link) => (
+                                <li key={link.name}>
                                     <a
                                         href={link.href}
                                         onClick={handleNavClick}
@@ -110,9 +110,9 @@ function Navbar() {
             {/* Mobile Menu */}
             <div id="mobile-menu" className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
                 <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-black/95 border-t border-gray-200 dark:border-white/10">
-                    {navLinks.map((link, index) => (
+                    {navLinks.map((link) => (
                         <a
-                            key={index}
+                            key={link.name}
                             href={link.href}
                             onClick={handleNavClick}
                             className="block px-4 py-3 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-100 dark:hover:bg-white/5 rounded-lg transition-all duration-200 font-medium"

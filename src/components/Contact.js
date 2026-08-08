@@ -88,8 +88,8 @@ function Contact() {
 
                 {/* Contact Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    {contactMethods.map((method, index) => (
-                        <ContactCard key={index} method={method} />
+                    {contactMethods.map((method) => (
+                        <ContactCard key={method.title} method={method} />
                     ))}
                 </div>
 
