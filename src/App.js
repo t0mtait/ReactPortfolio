@@ -18,9 +18,7 @@ function App() {
               <div className="animated-orb orb-3" aria-hidden="true"></div>
 
               <div className="relative z-10">
-                  <div className="section-animate section-delay-0">
-                      <Navbar/>
-                  </div>
+                  <Navbar/>
                   <div className="section-animate section-delay-1">
                       <About/>
                   </div>

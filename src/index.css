@@ -21,25 +21,6 @@ code {
     monospace;
 }
 
-/* Smooth transitions for theme changes - target elements that actually need them */
-body, section, article, aside,
-header, footer, nav, main,
-div, span,
-h1, h2, h3, h4, h5, h6,
-p, a, button, input, textarea, select,
-ul, ol, li, dl, dt, dd,
-table, thead, tbody, tr, th, td,
-.card, .navbar, .modal, .dropdown {
-  transition-property: background-color, border-color, color;
-  transition-duration: 200ms;
-  transition-timing-function: ease-in-out;
-}
-
-/* Links and buttons get all transitions for hover effects */
-a, button, .no-transition {
-  transition-property: all;
-}
-
 .theme-toggle-btn {
   will-change: transform;
 }

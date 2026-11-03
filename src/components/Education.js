@@ -5,7 +5,7 @@ function Education() {
         degree: "Bachelor of Computer Science",
         period: "2022 - 2026",
         highlights: [
-            "Class of 2026",
+            "Graduated: May 2026",
             "4x Dean's List Recipient",
             "Focus on software engineering and systems"
         ],
