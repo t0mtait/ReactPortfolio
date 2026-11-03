@@ -1,16 +1,12 @@
-import { useMediaQuery } from 'react-responsive'
-
 function Projects() {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
-
     const projects = [
         {
             title: "SupplementDB",
             description: "Web application allowing users to monitor their supplement regimen.",
             image: "supplementdb.png",
-            technologies: ["React", "HAPI-FHIR", "PostgreSQL"],
+            technologies: ["React", "HAPI-FHIR", "PostgreSQL", "MongoDB"],
             highlights: [
-                "Full-stack with React and PostgreSQL",
+                "Full-stack with React, PostgreSQL, and MongoDB",
                 "Explore, track, and share supplements",
                 "HAPI-FHIR server for EHR integration"
             ],
@@ -40,6 +36,18 @@ function Projects() {
                 "Ran locally via Ollama to ensure privacy"
             ],
             githubUrl: "https://github.com/t0mtait/gofilen"
+        },
+        {
+            title: "Testing",
+            description: "Automated tests to ensure proper functionality across all my projects. Built with Playwright.",
+            image: "testing.png",
+            technologies: ["Playwright", "JavaScript", "E2E Testing"],
+            highlights: [
+                "End-to-end automated test suites with Playwright",
+                "Verifies functionality and accessibility across all projects",
+                "Automated HTML test reporting and assertions"
+            ],
+            githubUrl: "https://github.com/t0mtait/testing"
         }
     ];
 
@@ -135,9 +143,9 @@ function Projects() {
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
                         Projects
-                    </h1>
+                    </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-600 dark:via-indigo-400 to-transparent mx-auto mb-4"></div>
                     <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
                         A showcase of my development work and technical projects
@@ -145,7 +153,7 @@ function Projects() {
                 </div>
 
                 {/* Projects Grid */}
-                <div className={`grid gap-8 ${isMobile ? 'grid-cols-1' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+                <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
                         <ProjectCard
                             key={index}
