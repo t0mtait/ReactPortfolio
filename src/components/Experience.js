@@ -53,18 +53,18 @@ function Experience() {
         <div className="group relative">
             {/* Timeline dot and line for desktop */}
             <div className="hidden md:flex absolute left-0 top-0 bottom-0 flex-col items-center">
-                <div className="w-4 h-4 rounded-full bg-indigo-600 dark:bg-indigo-400 border-4 border-gray-200 dark:border-gray-800 shadow-lg z-10"></div>
+                <div className="w-4 h-4 rounded-full bg-indigo-600 dark:bg-indigo-400 border-4 border-zinc-100 dark:border-black ring-1 ring-indigo-500/40 z-10"></div>
                 {index < experiences.length - 1 && (
-                    <div className="w-0.5 flex-1 bg-gradient-to-b from-indigo-400 dark:from-indigo-400/50 to-transparent mt-2"></div>
+                    <div className="w-0.5 flex-1 bg-gradient-to-b from-indigo-500/60 dark:from-indigo-400/50 to-transparent mt-2"></div>
                 )}
             </div>
 
             {/* Card content */}
-            <div className="md:ml-12 bg-white dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-xl p-6 hover:bg-gray-50 dark:hover:bg-white/10 hover:border-indigo-400 dark:hover:border-indigo-400/30 transition-all duration-300 shadow-lg hover:shadow-xl md:hover:translate-x-2">
+            <div className="md:ml-12 bg-white dark:bg-[#09090b] border border-zinc-200 dark:border-zinc-800/90 rounded-2xl p-6 hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.3)] md:hover:translate-x-1.5">
                 <div className="flex flex-col md:flex-row gap-6 items-start">
                     {/* Logo */}
                     <div className="flex-shrink-0 w-full md:w-auto flex justify-center mb-2 md:mb-0">
-                        <div className="bg-gray-900 dark:bg-gray-800 p-4 rounded-lg border border-gray-300 dark:border-transparent">
+                        <div className="bg-zinc-950 dark:bg-black p-4 rounded-xl border border-zinc-800">
                             <img 
                                 src={experience.logo} 
                                 alt={`${experience.company} logo`}
@@ -77,21 +77,21 @@ function Experience() {
                     {/* Content */}
                     <div className="flex-1">
                         <div className="text-center md:text-left">
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                            <h3 className="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white mb-1">
                                 {experience.company}
                             </h3>
-                            <h4 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 mb-2">
+                            <h4 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400 mb-1.5">
                                 {experience.role}
                             </h4>
-                            <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
+                            <p className="text-xs font-mono uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
                                 {experience.period}
                             </p>
                         </div>
 
-                        <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                        <ul className="space-y-2 text-zinc-700 dark:text-zinc-200 text-sm md:text-base">
                             {experience.responsibilities.map((item, idx) => (
-                                <li key={idx} className="flex items-start gap-2">
-                                    <span className="text-indigo-600 dark:text-indigo-400 mt-1.5 flex-shrink-0">•</span>
+                                <li key={idx} className="flex items-start gap-2.5">
+                                    <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs mt-1.5 flex-shrink-0">▸</span>
                                     <span className="leading-relaxed">{item}</span>
                                 </li>
                             ))}
@@ -103,18 +103,18 @@ function Experience() {
     );
 
     return (
-        <section className="scroll-mt-24 bg-transparent py-12 px-4" id="experience">
+        <section className="scroll-mt-24 bg-transparent py-14 px-4" id="experience">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-extrabold text-indigo-600 dark:text-indigo-400 mb-3">
+                    <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-indigo-600 dark:text-indigo-400 mb-3">
                         Experience
                     </h2>
                     <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-600 dark:via-indigo-400 to-transparent mx-auto"></div>
                 </div>
 
                 {/* Experience Timeline */}
-                <div className="space-y-8">
+                <div className="space-y-6">
                     {experiences.map((experience, index) => (
                         <ExperienceCard 
                             key={index} 

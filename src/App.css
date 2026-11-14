@@ -3,30 +3,50 @@
 	isolation: isolate;
 }
 
+.animated-bg::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 0;
+	background-image: radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px);
+	background-size: 28px 28px;
+	mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 30%, transparent 100%);
+	-webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 20%, #000 30%, transparent 100%);
+}
+
+.dark .animated-bg::before {
+	background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+}
+
 .animated-orb {
 	position: absolute;
 	border-radius: 9999px;
-	filter: blur(56px);
-	opacity: 0.22;
+	filter: blur(72px);
+	opacity: 0.14;
 	pointer-events: none;
 	z-index: 0;
-	animation: orbDrift 16s ease-in-out infinite;
+	animation: orbDrift 18s ease-in-out infinite;
+}
+
+.dark .animated-orb {
+	opacity: 0.07;
 }
 
 .orb-1 {
-	width: 22rem;
-	height: 22rem;
-	top: -7rem;
+	width: 24rem;
+	height: 24rem;
+	top: -8rem;
 	left: -6rem;
-	background: radial-gradient(circle at 35% 35%, #818cf8 0%, #6366f1 45%, #4f46e5 100%);
+	background: radial-gradient(circle at 35% 35%, #818cf8 0%, #6366f1 45%, transparent 75%);
 }
 
 .orb-2 {
 	width: 20rem;
 	height: 20rem;
-	top: 26%;
+	top: 28%;
 	right: -8rem;
-	background: radial-gradient(circle at 40% 30%, #22d3ee 0%, #3b82f6 55%, #2563eb 100%);
+	background: radial-gradient(circle at 40% 30%, #a855f7 0%, #6366f1 55%, transparent 75%);
 	animation-delay: -5s;
 }
 
@@ -35,23 +55,23 @@
 	height: 18rem;
 	bottom: 6%;
 	left: 34%;
-	background: radial-gradient(circle at 40% 40%, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
+	background: radial-gradient(circle at 40% 40%, #818cf8 0%, #4f46e5 50%, transparent 75%);
 	animation-delay: -10s;
 }
 
 .section-animate {
 	opacity: 0;
 	transform: translateY(18px);
-	animation: fadeInUp 650ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	animation: fadeInUp 600ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .section-delay-0 { animation-delay: 40ms; }
-.section-delay-1 { animation-delay: 130ms; }
-.section-delay-2 { animation-delay: 220ms; }
-.section-delay-3 { animation-delay: 310ms; }
-.section-delay-4 { animation-delay: 400ms; }
-.section-delay-5 { animation-delay: 490ms; }
-.section-delay-6 { animation-delay: 580ms; }
+.section-delay-1 { animation-delay: 110ms; }
+.section-delay-2 { animation-delay: 180ms; }
+.section-delay-3 { animation-delay: 250ms; }
+.section-delay-4 { animation-delay: 320ms; }
+.section-delay-5 { animation-delay: 390ms; }
+.section-delay-6 { animation-delay: 460ms; }
 
 @keyframes orbDrift {
 	0%, 100% {
@@ -83,5 +103,3 @@
 		opacity: 1 !important;
 	}
 }
-
-

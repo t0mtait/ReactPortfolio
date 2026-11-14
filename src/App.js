@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar';
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
@@ -12,7 +12,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 function App() {
   return (
       <ThemeProvider>
-          <div className="App animated-bg bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-slate-900 dark:to-black text-gray-900 dark:text-gray-100 relative overflow-x-hidden min-h-screen transition-colors duration-300">
+          <div className="App animated-bg bg-zinc-50 dark:bg-black text-zinc-950 dark:text-white relative overflow-x-hidden min-h-screen transition-colors duration-300 selection:bg-indigo-500 selection:text-white">
               <div className="animated-orb orb-1" aria-hidden="true"></div>
               <div className="animated-orb orb-2" aria-hidden="true"></div>
               <div className="animated-orb orb-3" aria-hidden="true"></div>

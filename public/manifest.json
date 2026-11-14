@@ -3,6 +3,11 @@
   "name": "Tom Tait | Portfolio",
   "icons": [
     {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
       "src": "favicon.png",
       "sizes": "64x64",
       "type": "image/png"
@@ -16,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#4f46e5",
-  "background_color": "#0f172a"
+  "background_color": "#000000"
 }
