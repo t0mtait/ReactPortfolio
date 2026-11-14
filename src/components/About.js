@@ -1,20 +1,20 @@
 function About() {
     return (
-        <section id="about" className="scroll-mt-24 bg-transparent py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+        <section id="about" className="scroll-mt-24 bg-transparent py-14 lg:py-20 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     {/* Left Content (below image on mobile/tablet, left on desktop) */}
                     <div className="order-2 lg:order-1 text-center lg:text-left space-y-6">
                         <div>
-                            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-3 lg:mb-4 leading-tight">
+                            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold tracking-tight text-zinc-950 dark:text-white mb-3 lg:mb-4 leading-tight">
                                 Hi, I'm Tom!
                             </h1>
-                            <h2 className="text-xl sm:text-2xl xl:text-3xl font-semibold text-indigo-600 dark:text-indigo-400 mb-6">
+                            <h2 className="text-xl sm:text-2xl xl:text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-6">
                                 IT Professional
                             </h2>
                         </div>
 
-                        <p className="text-gray-600 dark:text-gray-400 text-base lg:text-lg leading-relaxed max-w-2xl lg:max-w-xl mx-auto lg:mx-0">
+                        <p className="text-zinc-600 dark:text-zinc-300 text-base lg:text-lg leading-relaxed max-w-2xl lg:max-w-xl mx-auto lg:mx-0">
                             UNB Computer Science graduate with 24 months of professional experience.
                             I enjoy building full-stack applications, automating infrastructure, and applying machine learning to solve real problems.
                         </p>
@@ -23,7 +23,7 @@ function About() {
                         <div className="flex justify-center lg:justify-start gap-4 flex-wrap pt-2 lg:pt-4">
                             <a
                                 href="https://github.com/t0mtait"
-                                className="inline-flex items-center gap-2 lg:gap-3 px-6 lg:px-8 py-3 lg:py-3.5 text-sm lg:text-base font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl lg:hover:scale-105"
+                                className="inline-flex items-center gap-2.5 px-6 lg:px-7 py-3 lg:py-3.5 text-sm lg:text-base font-semibold text-zinc-900 dark:text-white bg-white dark:bg-[#09090b] border border-zinc-300 dark:border-zinc-800 rounded-xl hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-[0_0_25px_-5px_rgba(99,102,241,0.35)] transition-all duration-200 lg:hover:-translate-y-0.5"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -34,7 +34,7 @@ function About() {
                             </a>
                             <a
                                 href="https://www.linkedin.com/in/tom-tait/"
-                                className="inline-flex items-center gap-2 lg:gap-3 px-6 lg:px-8 py-3 lg:py-3.5 text-sm lg:text-base font-medium text-gray-900 dark:text-white bg-white dark:bg-white/10 border border-gray-300 dark:border-white/30 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all duration-300 shadow-lg hover:shadow-xl lg:hover:scale-105"
+                                className="inline-flex items-center gap-2.5 px-6 lg:px-7 py-3 lg:py-3.5 text-sm lg:text-base font-semibold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-500 rounded-xl shadow-sm hover:shadow-[0_0_25px_-5px_rgba(99,102,241,0.6)] transition-all duration-200 lg:hover:-translate-y-0.5"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -52,7 +52,7 @@ function About() {
                             <img
                                 src="tomtait.png"
                                 alt="Tom Tait"
-                                className="w-48 h-48 lg:w-full lg:h-auto lg:max-w-md object-cover rounded-full lg:rounded-2xl border-4 lg:border border-indigo-200 dark:border-indigo-500/30 lg:border-gray-300 lg:dark:border-white/10 shadow-xl lg:shadow-2xl lg:hover:scale-105 transition-transform duration-300"
+                                className="w-48 h-48 lg:w-full lg:h-auto lg:max-w-md object-cover rounded-full lg:rounded-2xl border-2 border-indigo-500/40 dark:border-zinc-800 shadow-2xl lg:hover:border-indigo-500 transition-all duration-300"
                             />
                         </div>
                     </div>

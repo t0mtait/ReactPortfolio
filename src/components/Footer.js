@@ -7,11 +7,11 @@ function Footer() {
     ];
 
     return (
-        <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-white/10 py-8 px-4">
+        <footer className="bg-white dark:bg-black border-t border-zinc-200 dark:border-zinc-800/90 py-8 px-4 transition-colors duration-300">
             <div className="max-w-6xl mx-auto">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     {/* Copyright */}
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400">
                         © {currentYear} Tom Tait. All rights reserved.
                     </p>
                     
@@ -23,7 +23,7 @@ function Footer() {
                                 href={link.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
+                                className="text-zinc-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200"
                                 aria-label={link.name}
                             >
                                 {link.name === 'GitHub' && (
