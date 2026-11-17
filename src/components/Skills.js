@@ -11,31 +11,31 @@ function Skills() {
             label: "Languages",
             color: "bg-indigo-600 text-white border-indigo-500 dark:bg-indigo-500/15 dark:text-indigo-300 dark:border-indigo-500/40 dark:hover:bg-indigo-500/25 dark:hover:border-indigo-400",
             dot: "bg-indigo-500 dark:bg-indigo-400",
-            items: ["TypeScript", "Python", "Go", "Java", "C#", "SQL", "Bash"]
+            items: ["JavaScript", "Python", "Java", "C#", "SQL", "Bash"]
         },
         frontend: {
             label: "Frontend",
             color: "bg-emerald-600 text-white border-emerald-500 dark:bg-emerald-500/15 dark:text-emerald-300 dark:border-emerald-500/40 dark:hover:bg-emerald-500/25 dark:hover:border-emerald-400",
             dot: "bg-emerald-500 dark:bg-emerald-400",
-            items: ["React", "Next.js", "Tailwind CSS", "HTML/CSS"]
+            items: ["React", "Next.js", "Tailwind CSS"]
         },
         backend: {
             label: "Backend",
             color: "bg-amber-500 text-white border-amber-400 dark:bg-amber-500/15 dark:text-amber-300 dark:border-amber-500/40 dark:hover:bg-amber-500/25 dark:hover:border-amber-400",
             dot: "bg-amber-500 dark:bg-amber-400",
-            items: ["Node.js", "Express", "REST APIs", "PostgreSQL", "MongoDB"]
+            items: ["Node.js", "AI Agent Frameworks", "REST APIs", "PostgreSQL", "MongoDB"]
         },
         devops: {
             label: "DevOps & Cloud",
             color: "bg-rose-600 text-white border-rose-500 dark:bg-rose-500/15 dark:text-rose-300 dark:border-rose-500/40 dark:hover:bg-rose-500/25 dark:hover:border-rose-400",
             dot: "bg-rose-500 dark:bg-rose-400",
-            items: ["AWS", "GCP", "Azure", "Docker", "Kubernetes", "CI/CD"]
+            items: ["AWS", "GCP", "Azure", "Azure DevOps", "Docker", "Kubernetes", "GitLab CI/CD", "GitHub Actions", "PromQL"]
         },
         tools: {
             label: "Tools & Practices",
             color: "bg-cyan-600 text-white border-cyan-500 dark:bg-cyan-500/15 dark:text-cyan-300 dark:border-cyan-500/40 dark:hover:bg-cyan-500/25 dark:hover:border-cyan-400",
             dot: "bg-cyan-500 dark:bg-cyan-400",
-            items: ["Git", "Agile", "Test-Driven Development"]
+            items: ["Git", "Agile", "Test Automation"]
         }
     };
 
