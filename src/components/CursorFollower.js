@@ -13,6 +13,7 @@ function CursorFollower() {
     const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+    const isVisibleRef = useRef(false);
 
     useEffect(() => {
         // Safe check for environments without window.matchMedia (e.g. jsdom / SSR)
@@ -37,12 +38,25 @@ function CursorFollower() {
         let ringY = mouseY;
         let spotlightX = mouseX;
         let spotlightY = mouseY;
+        let hasInitialized = false;
         let animationFrameId;
 
         const onMouseMove = (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
-            if (!isVisible) setIsVisible(true);
+
+            if (!hasInitialized) {
+                hasInitialized = true;
+                ringX = mouseX;
+                ringY = mouseY;
+                spotlightX = mouseX;
+                spotlightY = mouseY;
+            }
+
+            if (!isVisibleRef.current) {
+                isVisibleRef.current = true;
+                setIsVisible(true);
+            }
 
             // Update inner dot immediately for zero latency
             if (cursorDotRef.current) {
@@ -52,8 +66,14 @@ function CursorFollower() {
 
         const onMouseDown = () => setIsClicked(true);
         const onMouseUp = () => setIsClicked(false);
-        const onMouseLeave = () => setIsVisible(false);
-        const onMouseEnter = () => setIsVisible(true);
+        const onMouseLeave = () => {
+            isVisibleRef.current = false;
+            setIsVisible(false);
+        };
+        const onMouseEnter = () => {
+            isVisibleRef.current = true;
+            setIsVisible(true);
+        };
 
         // Smooth physics loop for ambient spotlight and floating outer ring
         const render = () => {
@@ -64,6 +84,10 @@ function CursorFollower() {
             // Slightly slower, deeper float for ambient background spotlight
             spotlightX += (mouseX - spotlightX) * 0.09;
             spotlightY += (mouseY - spotlightY) * 0.09;
+
+            if (cursorDotRef.current) {
+                cursorDotRef.current.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+            }
 
             if (cursorRingRef.current) {
                 cursorRingRef.current.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
@@ -80,11 +104,12 @@ function CursorFollower() {
         const handleElementOver = (e) => {
             const target = e.target;
             if (
-                target.closest('a') ||
-                target.closest('button') ||
-                target.closest('input') ||
-                target.closest('[role="button"]') ||
-                target.closest('.interactive-target')
+                target &&
+                (target.closest('a') ||
+                    target.closest('button') ||
+                    target.closest('input') ||
+                    target.closest('[role="button"]') ||
+                    target.closest('.interactive-target'))
             ) {
                 setIsHovered(true);
             } else {
@@ -111,7 +136,7 @@ function CursorFollower() {
             document.removeEventListener('mouseover', handleElementOver);
             cancelAnimationFrame(animationFrameId);
         };
-    }, [isVisible]);
+    }, []);
 
     if (!isPointerDevice) {
         return null;
@@ -134,7 +159,7 @@ function CursorFollower() {
             {/* Outer Glowing Trailing Halo Ring */}
             <div
                 ref={cursorRingRef}
-                className="pointer-events-none absolute -top-5 -left-5 w-10 h-10 rounded-full border transition-all duration-150 ease-out flex items-center justify-center"
+                className="pointer-events-none absolute -top-5 -left-5 w-10 h-10 rounded-full border flex items-center justify-center"
                 style={{
                     opacity: isVisible ? 1 : 0,
                     borderColor: isHovered
@@ -143,11 +168,12 @@ function CursorFollower() {
                     backgroundColor: isHovered
                         ? 'rgba(99, 102, 241, 0.12)'
                         : 'rgba(99, 102, 241, 0.03)',
-                    transform: 'translate3d(-100px, -100px, 0)',
                     scale: isClicked ? '0.75' : isHovered ? '1.7' : '1',
                     boxShadow: isHovered
                         ? '0 0 20px 4px rgba(99, 102, 241, 0.35)'
                         : '0 0 10px 1px rgba(99, 102, 241, 0.15)',
+                    transition:
+                        'border-color 150ms ease-out, background-color 150ms ease-out, box-shadow 150ms ease-out, scale 150ms ease-out, opacity 150ms ease-out',
                     willChange: 'transform, scale',
                 }}
             />
@@ -155,11 +181,11 @@ function CursorFollower() {
             {/* Inner Precision Dot */}
             <div
                 ref={cursorDotRef}
-                className="pointer-events-none absolute -top-1 -left-1 w-2 h-2 rounded-full bg-indigo-500 dark:bg-white shadow-[0_0_8px_rgba(99,102,241,0.8)] transition-transform duration-75"
+                className="pointer-events-none absolute -top-1 -left-1 w-2 h-2 rounded-full bg-indigo-500 dark:bg-white shadow-[0_0_8px_rgba(99,102,241,0.8)]"
                 style={{
                     opacity: isVisible ? 1 : 0,
-                    transform: 'translate3d(-100px, -100px, 0)',
                     scale: isClicked ? '1.5' : isHovered ? '0.6' : '1',
+                    transition: 'scale 150ms ease-out, opacity 150ms ease-out',
                     willChange: 'transform, scale',
                 }}
             />
