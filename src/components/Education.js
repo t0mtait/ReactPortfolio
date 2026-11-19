@@ -1,4 +1,16 @@
+import { useRef } from 'react';
+
 function Education() {
+    const cardRef = useRef(null);
+
+    const handleMouseMove = (e) => {
+        if (!cardRef.current) return;
+        const rect = cardRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        cardRef.current.style.setProperty('--mouse-x', `${x}px`);
+        cardRef.current.style.setProperty('--mouse-y', `${y}px`);
+    };
 
     const education = {
         institution: "University of New Brunswick",
@@ -32,12 +44,16 @@ function Education() {
                 </div>
 
                 {/* Education Card */}
-                <div className="bg-white dark:bg-[#09090b] border border-zinc-200 dark:border-zinc-800/90 rounded-2xl overflow-hidden hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.3)]">
-                    <div className="p-8">
+                <div
+                    ref={cardRef}
+                    onMouseMove={handleMouseMove}
+                    className="spotlight-card bg-white/90 dark:bg-[#09090b]/90 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800/90 rounded-2xl overflow-hidden hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.3)]"
+                >
+                    <div className="p-8 relative z-10">
                         <div className="flex flex-col md:flex-row gap-8 items-start">
-                            {/* Logo placeholder */}
+                            {/* Logo */}
                             <div className="flex-shrink-0 w-full md:w-48 flex justify-center">
-                                <div className="bg-zinc-950 dark:bg-black p-6 rounded-xl border border-zinc-800">
+                                <div className="bg-zinc-950 dark:bg-black p-6 rounded-xl border border-zinc-800 transition-transform duration-300 hover:scale-105">
                                     <div className="text-center">
                                         <div className="text-3xl font-extrabold tracking-tight text-white mb-1">UNB</div>
                                         <div className="text-xs font-mono text-zinc-400">Fredericton, NB</div>
@@ -58,25 +74,31 @@ function Education() {
                                 </p>
 
                                 {/* Highlights */}
-                                <div className="space-y-2 mb-6">
-                                    {education.highlights.map((highlight, idx) => (
-                                        <div key={idx} className="flex items-center gap-2.5 text-zinc-700 dark:text-zinc-200">
-                                            <span className="text-indigo-600 dark:text-indigo-400 font-bold">✓</span>
-                                            <span className="text-sm">{highlight}</span>
-                                        </div>
-                                    ))}
+                                <div className="mb-6">
+                                    <div className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-3">Highlights</div>
+                                    <ul className="space-y-2">
+                                        {education.highlights.map((highlight, index) => (
+                                            <li key={index} className="flex items-start gap-2.5 text-sm text-zinc-700 dark:text-zinc-200">
+                                                <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs mt-1 flex-shrink-0">▸</span>
+                                                <span className="leading-relaxed">{highlight}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
 
-                                {/* Relevant Courses */}
-                                <div className="flex flex-wrap gap-2">
-                                    {education.courses.map((course, idx) => (
-                                        <span 
-                                            key={idx}
-                                            className="px-3 py-1 text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 rounded-md border border-zinc-200 dark:border-zinc-800"
-                                        >
-                                            {course}
-                                        </span>
-                                    ))}
+                                {/* Key Courses */}
+                                <div>
+                                    <div className="text-xs font-mono uppercase tracking-wider text-zinc-400 mb-3">Relevant Coursework</div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {education.courses.map((course, index) => (
+                                            <span 
+                                                key={index}
+                                                className="px-3 py-1 text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-indigo-500/40 transition-colors"
+                                            >
+                                                {course}
+                                            </span>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>

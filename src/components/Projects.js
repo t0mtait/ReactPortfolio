@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+
 function Projects() {
     const projects = [
         {
@@ -43,21 +45,22 @@ function Projects() {
         },
         {
             id: "03",
-            category: "Local AI Agent",
-            title: "GoFilen",
-            description: "AI agent that automates file management tasks using natural language commands.",
-            technologies: ["Go", "Natural Language Processing", "AI Agents"],
+            category: "Full-Stack Web App",
+            title: "smpl",
+            description: "Personal inventory and decluttering web app to track possessions, calculate declutter scores, and log sales.",
+            technologies: ["Next.js", "React", "SQLite", "Tailwind CSS"],
             highlights: [
-                "LLM-powered agent for file management",
-                "Targets on-system Filen network mount",
-                "Ran locally via Ollama to ensure privacy"
+                "Track possessions, usage cadences, and estimated item values",
+                "Weighted declutter scoring algorithm to recommend items to offload",
+                "Self-hosted architecture using Next.js and Node 22 built-in SQLite"
             ],
-            githubUrl: "https://github.com/t0mtait/gofilen",
+            githubUrl: "https://github.com/t0mtait/smpl",
+            visitUrl: "https://smpl.tomjt.com",
             accentBar: "from-amber-400 via-orange-500 to-rose-500",
             badgeStyle: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
             icon: (
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                 </svg>
             )
         },
@@ -90,102 +93,120 @@ function Projects() {
     );
 
     const ExternalLinkIcon = () => (
-        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
     );
 
-    const ProjectCard = ({ project }) => (
-        <div className="group h-full">
-            <div className="relative h-full flex flex-col bg-white dark:bg-[#09090b] border border-zinc-200 dark:border-zinc-800/90 rounded-2xl overflow-hidden hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_35px_-10px_rgba(99,102,241,0.3)] hover:-translate-y-1">
-                {/* Crisp Top Gradient Accent Line */}
-                <div className={`h-1 w-full bg-gradient-to-r ${project.accentBar}`} />
+    const ProjectCard = ({ project }) => {
+        const cardRef = useRef(null);
 
-                <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between gap-6">
-                    <div className="space-y-5">
-                        {/* Header: Icon + Category + Title + Index */}
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex items-center gap-3.5">
-                                <div className={`flex items-center justify-center w-11 h-11 rounded-xl border ${project.badgeStyle} transition-transform duration-300 group-hover:scale-105`}>
-                                    {project.icon}
+        const handleMouseMove = (e) => {
+            if (!cardRef.current) return;
+            const rect = cardRef.current.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            cardRef.current.style.setProperty('--mouse-x', `${x}px`);
+            cardRef.current.style.setProperty('--mouse-y', `${y}px`);
+        };
+
+        return (
+            <div className="group h-full">
+                <div
+                    ref={cardRef}
+                    onMouseMove={handleMouseMove}
+                    className="spotlight-card relative h-full flex flex-col bg-white/90 dark:bg-[#09090b]/90 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800/90 rounded-2xl overflow-hidden hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_35px_-8px_rgba(99,102,241,0.35)] hover:-translate-y-1"
+                >
+                    {/* Crisp Top Gradient Accent Line */}
+                    <div className={`h-1 w-full bg-gradient-to-r ${project.accentBar}`} />
+
+                    <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between gap-6 relative z-10">
+                        <div className="space-y-5">
+                            {/* Header: Icon + Category + Title + Index */}
+                            <div className="flex items-start justify-between gap-4">
+                                <div className="flex items-center gap-3.5">
+                                    <div className={`flex items-center justify-center w-11 h-11 rounded-xl border ${project.badgeStyle} transition-transform duration-300 group-hover:scale-110 group-hover:rotate-1`}>
+                                        {project.icon}
+                                    </div>
+                                    <div>
+                                        <span className="block text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400 font-semibold mb-0.5">
+                                            {project.category}
+                                        </span>
+                                        <h3 className="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
+                                            {project.title}
+                                        </h3>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span className="block text-xs font-mono uppercase tracking-wider text-indigo-600 dark:text-indigo-400 font-semibold mb-0.5">
-                                        {project.category}
-                                    </span>
-                                    <h3 className="text-2xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
-                                        {project.title}
-                                    </h3>
-                                </div>
-                            </div>
-                            <span className="font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-zinc-100 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 select-none">
-                                {project.id}
-                            </span>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-zinc-600 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
-                            {project.description}
-                        </p>
-
-                        {/* Recessed Spec / Highlights Panel */}
-                        <div className="bg-zinc-50 dark:bg-black border border-zinc-200/80 dark:border-zinc-800/90 rounded-xl p-4">
-                            <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-2.5">
-                                Key Highlights
-                            </div>
-                            <ul className="space-y-2 text-zinc-700 dark:text-zinc-200 text-sm">
-                                {project.highlights.map((highlight, idx) => (
-                                    <li key={idx} className="flex items-start gap-2.5">
-                                        <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs mt-1 flex-shrink-0">▸</span>
-                                        <span className="leading-relaxed">{highlight}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Footer: Tech Stack + Action Links */}
-                    <div className="space-y-4 pt-2 border-t border-zinc-100 dark:border-zinc-900">
-                        <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech, idx) => (
-                                <span
-                                    key={idx}
-                                    className="px-3 py-1 text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 rounded-md"
-                                >
-                                    {tech}
+                                <span className="font-mono text-xs font-bold px-2.5 py-1 rounded-md bg-zinc-100 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 select-none">
+                                    {project.id}
                                 </span>
-                            ))}
+                            </div>
+
+                            {/* Description */}
+                            <p className="text-zinc-600 dark:text-zinc-300 text-sm sm:text-base leading-relaxed">
+                                {project.description}
+                            </p>
+
+                            {/* Recessed Spec / Highlights Panel */}
+                            <div className="bg-zinc-50/80 dark:bg-black/60 border border-zinc-200/80 dark:border-zinc-800/90 rounded-xl p-4 transition-colors group-hover:border-zinc-300 dark:group-hover:border-zinc-700">
+                                <div className="text-[11px] font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500 font-semibold mb-2.5 flex items-center justify-between">
+                                    <span>Key Highlights</span>
+                                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500/60" />
+                                </div>
+                                <ul className="space-y-2 text-zinc-700 dark:text-zinc-200 text-sm">
+                                    {project.highlights.map((highlight, idx) => (
+                                        <li key={idx} className="flex items-start gap-2.5">
+                                            <span className="text-indigo-600 dark:text-indigo-400 font-mono text-xs mt-1 flex-shrink-0">▸</span>
+                                            <span className="leading-relaxed">{highlight}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-3">
-                            {project.githubUrl && (
-                                <a
-                                    href={project.githubUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:bg-indigo-600 hover:text-white hover:border-indigo-600 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 transition-all duration-200"
-                                >
-                                    <GitHubIcon />
-                                    <span>View on GitHub</span>
-                                </a>
-                            )}
-                            {project.visitUrl && (
-                                <a
-                                    href={project.visitUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-500 rounded-lg shadow-sm hover:shadow-[0_0_20px_-4px_rgba(99,102,241,0.6)] transition-all duration-200"
-                                >
-                                    <span>Visit Site</span>
-                                    <ExternalLinkIcon />
-                                </a>
-                            )}
+                        {/* Footer: Tech Stack + Action Links */}
+                        <div className="space-y-4 pt-2 border-t border-zinc-100 dark:border-zinc-900">
+                            <div className="flex flex-wrap gap-2">
+                                {project.technologies.map((tech, idx) => (
+                                    <span
+                                        key={idx}
+                                        className="px-3 py-1 text-xs font-semibold bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-800 rounded-md hover:border-indigo-500/40 transition-colors"
+                                    >
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <div className="flex flex-wrap gap-3">
+                                {project.githubUrl && (
+                                    <a
+                                        href={project.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-zinc-900 dark:text-white bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:bg-indigo-600 hover:text-white hover:border-indigo-600 dark:hover:bg-indigo-500 dark:hover:border-indigo-500 transition-all duration-200 hover:shadow-md"
+                                    >
+                                        <GitHubIcon />
+                                        <span>View on GitHub</span>
+                                    </a>
+                                )}
+                                {project.visitUrl && (
+                                    <a
+                                        href={project.visitUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group/btn inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 border border-indigo-500 rounded-lg shadow-sm hover:shadow-[0_0_22px_-3px_rgba(99,102,241,0.65)] transition-all duration-200"
+                                    >
+                                        <span>Visit Site</span>
+                                        <ExternalLinkIcon />
+                                    </a>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    };
 
     return (
         <section className="scroll-mt-24 bg-transparent py-14 px-4" id="projects">

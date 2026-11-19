@@ -1,10 +1,23 @@
+import { useState, useRef } from 'react';
+
 function Contact() {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopyEmail = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navigator.clipboard.writeText('mail@tomjt.com');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2200);
+    };
+
     const contactMethods = [
         {
             title: "Email",
             description: "Send me a message",
             value: "mail@tomjt.com",
             link: "mailto:mail@tomjt.com",
+            isEmail: true,
             icon: (
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -36,38 +49,79 @@ function Contact() {
     ];
 
     const ContactCard = ({ method }) => {
+        const cardRef = useRef(null);
         const isExternal = method.link.startsWith('http') || method.link.startsWith('mailto:');
+
+        const handleMouseMove = (e) => {
+            if (!cardRef.current) return;
+            const rect = cardRef.current.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            cardRef.current.style.setProperty('--mouse-x', `${x}px`);
+            cardRef.current.style.setProperty('--mouse-y', `${y}px`);
+        };
+
         return (
-        <a
-            href={method.link}
-            target={isExternal ? '_blank' : undefined}
-            rel={isExternal ? 'noopener noreferrer' : undefined}
-            className="group block"
-        >
-            <div className="bg-white dark:bg-[#09090b] border border-zinc-200 dark:border-zinc-800/90 rounded-2xl p-6 hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.35)] hover:-translate-y-1">
-                <div className="flex flex-col items-center text-center space-y-3.5">
-                    {/* Icon */}
-                    <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/30 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300">
-                        {method.icon}
+            <a
+                href={method.link}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
+                className="group block h-full focus:outline-none"
+            >
+                <div
+                    ref={cardRef}
+                    onMouseMove={handleMouseMove}
+                    className="spotlight-card relative h-full bg-white/90 dark:bg-[#09090b]/90 backdrop-blur-sm border border-zinc-200 dark:border-zinc-800/90 rounded-2xl p-6 hover:border-indigo-500 dark:hover:border-indigo-500/80 transition-all duration-300 shadow-sm hover:shadow-[0_0_30px_-10px_rgba(99,102,241,0.35)] hover:-translate-y-1"
+                >
+                    <div className="flex flex-col items-center text-center space-y-3.5 relative z-10">
+                        {/* Icon */}
+                        <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-500/10 border border-indigo-200 dark:border-indigo-500/30 text-indigo-600 dark:text-indigo-400 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                            {method.icon}
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
+                            {method.title}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                            {method.description}
+                        </p>
+
+                        {/* Value */}
+                        <p className="text-sm font-mono font-semibold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-300 transition-colors">
+                            {method.value}
+                        </p>
+
+                        {/* Interactive Copy Button for Email */}
+                        {method.isEmail && (
+                            <button
+                                type="button"
+                                onClick={handleCopyEmail}
+                                className="mt-1 px-3 py-1 text-xs font-mono font-medium rounded-md bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-all duration-200 flex items-center gap-1.5"
+                                title="Copy email address"
+                            >
+                                {copied ? (
+                                    <>
+                                        <svg className="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span className="text-emerald-500 dark:text-emerald-400 font-semibold">Copied!</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                                        </svg>
+                                        <span>Copy</span>
+                                    </>
+                                )}
+                            </button>
+                        )}
                     </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-extrabold tracking-tight text-zinc-950 dark:text-white">
-                        {method.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                        {method.description}
-                    </p>
-
-                    {/* Value */}
-                    <p className="text-sm font-mono font-semibold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 dark:group-hover:text-indigo-300 transition-colors">
-                        {method.value}
-                    </p>
                 </div>
-            </div>
-        </a>
+            </a>
         );
     };
 
@@ -92,7 +146,6 @@ function Contact() {
                         <ContactCard key={index} method={method} />
                     ))}
                 </div>
-
             </div>
         </section>
     );
