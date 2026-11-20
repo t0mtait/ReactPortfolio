@@ -4,12 +4,18 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #fafafa;
+  background-color: #000000;
+  color-scheme: dark;
 }
 
 html.dark {
   background-color: #000000;
   color-scheme: dark;
+}
+
+html:not(.dark) {
+  background-color: #fafafa;
+  color-scheme: light;
 }
 
 body {

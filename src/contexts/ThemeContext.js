@@ -4,14 +4,20 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
     const [isDarkMode, setIsDarkMode] = useState(() => {
-        // Check local storage or default to dark mode
-        const savedTheme = localStorage.getItem('theme');
-        return savedTheme ? savedTheme === 'dark' : true;
+        // Dark mode is default for everyone regardless of system or browser preference
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            return savedTheme ? savedTheme === 'dark' : true;
+        } catch (e) {
+            return true;
+        }
     });
 
     useEffect(() => {
         // Save to local storage and update document class
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        try {
+            localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        } catch (e) {}
         if (isDarkMode) {
             document.documentElement.classList.add('dark');
         } else {

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="%PUBLIC_URL%/favicon.svg" />
     <link rel="alternate icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="description" content="Tom Tait - IT Professional & UNB Computer Science Graduate. Building full-stack apps, automating infrastructure, and applying ML to real problems." />
     <!-- Open Graph -->
     <meta property="og:title" content="Tom Tait | Portfolio" />
@@ -14,6 +15,18 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Tom Tait | Portfolio</title>
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('theme');
+          if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
