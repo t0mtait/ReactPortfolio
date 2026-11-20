@@ -11,7 +11,6 @@ function CursorFollower() {
 
     const [isPointerDevice, setIsPointerDevice] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
-    const [isClicked, setIsClicked] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const isVisibleRef = useRef(false);
 
@@ -64,8 +63,6 @@ function CursorFollower() {
             }
         };
 
-        const onMouseDown = () => setIsClicked(true);
-        const onMouseUp = () => setIsClicked(false);
         const onMouseLeave = () => {
             isVisibleRef.current = false;
             setIsVisible(false);
@@ -118,8 +115,6 @@ function CursorFollower() {
         };
 
         window.addEventListener('mousemove', onMouseMove, { passive: true });
-        window.addEventListener('mousedown', onMouseDown);
-        window.addEventListener('mouseup', onMouseUp);
         document.body.addEventListener('mouseleave', onMouseLeave);
         document.body.addEventListener('mouseenter', onMouseEnter);
         document.addEventListener('mouseover', handleElementOver, { passive: true });
@@ -129,8 +124,6 @@ function CursorFollower() {
         return () => {
             mediaQuery.removeEventListener('change', handleMediaChange);
             window.removeEventListener('mousemove', onMouseMove);
-            window.removeEventListener('mousedown', onMouseDown);
-            window.removeEventListener('mouseup', onMouseUp);
             document.body.removeEventListener('mouseleave', onMouseLeave);
             document.body.removeEventListener('mouseenter', onMouseEnter);
             document.removeEventListener('mouseover', handleElementOver);
@@ -163,18 +156,17 @@ function CursorFollower() {
                 style={{
                     opacity: isVisible ? 1 : 0,
                     borderColor: isHovered
-                        ? 'rgba(129, 140, 248, 0.9)'
+                        ? 'rgba(129, 140, 248, 0.95)'
                         : 'rgba(99, 102, 241, 0.45)',
                     backgroundColor: isHovered
-                        ? 'rgba(99, 102, 241, 0.12)'
+                        ? 'rgba(99, 102, 241, 0.16)'
                         : 'rgba(99, 102, 241, 0.03)',
-                    scale: isClicked ? '0.75' : isHovered ? '1.7' : '1',
                     boxShadow: isHovered
-                        ? '0 0 20px 4px rgba(99, 102, 241, 0.35)'
+                        ? '0 0 20px 4px rgba(99, 102, 241, 0.4)'
                         : '0 0 10px 1px rgba(99, 102, 241, 0.15)',
                     transition:
-                        'border-color 150ms ease-out, background-color 150ms ease-out, box-shadow 150ms ease-out, scale 150ms ease-out, opacity 150ms ease-out',
-                    willChange: 'transform, scale',
+                        'border-color 150ms ease-out, background-color 150ms ease-out, box-shadow 150ms ease-out, opacity 150ms ease-out',
+                    willChange: 'transform',
                 }}
             />
 
@@ -184,9 +176,8 @@ function CursorFollower() {
                 className="pointer-events-none absolute -top-1 -left-1 w-2 h-2 rounded-full bg-indigo-500 dark:bg-white shadow-[0_0_8px_rgba(99,102,241,0.8)]"
                 style={{
                     opacity: isVisible ? 1 : 0,
-                    scale: isClicked ? '1.5' : isHovered ? '0.6' : '1',
-                    transition: 'scale 150ms ease-out, opacity 150ms ease-out',
-                    willChange: 'transform, scale',
+                    transition: 'opacity 150ms ease-out',
+                    willChange: 'transform',
                 }}
             />
         </div>

@@ -35,10 +35,34 @@ function About() {
                                 <span className="block text-lg font-extrabold text-indigo-600 dark:text-indigo-400">4</span>
                                 <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Production Projects</span>
                             </div>
-                            <div className="px-3.5 py-2 rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 backdrop-blur-sm shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 hover:-translate-y-0.5 transition-all duration-200">
-                                <span className="block text-lg font-extrabold text-indigo-600 dark:text-indigo-400">100%</span>
-                                <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Automated Tests</span>
+                            <div className="px-3.5 py-2 rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 backdrop-blur-sm shadow-sm hover:border-emerald-500 dark:hover:border-emerald-400 hover:-translate-y-0.5 transition-all duration-200 min-w-[140px]">
+                                <div className="flex items-center justify-between gap-1.5 mb-0.5">
+                                    <span className="block text-lg font-extrabold text-emerald-600 dark:text-emerald-400">100%</span>
+                                    <span className="text-[10px] font-mono font-bold px-1.5 py-0.2 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                                        CHARGED
+                                    </span>
+                                </div>
+                                <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium block">Automated Tests</span>
+                                {/* Animated fully charged status bar */}
+                                <div className="mt-2 w-full h-2 bg-zinc-200 dark:bg-zinc-800 rounded-full overflow-hidden p-[1px] charged-bar-glow">
+                                    <div className="h-full w-full rounded-full charged-shimmer" />
+                                </div>
                             </div>
+                            <a
+                                href="https://github.com/t0mtait/problem-solving"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group px-3.5 py-2 rounded-xl bg-white/70 dark:bg-zinc-900/70 border border-zinc-200 dark:border-zinc-800 backdrop-blur-sm shadow-sm hover:border-indigo-500 dark:hover:border-indigo-400 hover:-translate-y-0.5 transition-all duration-200"
+                                title="View 100+ public LeetCode solutions on GitHub"
+                            >
+                                <div className="flex items-center justify-between gap-1.5">
+                                    <span className="block text-lg font-extrabold text-indigo-600 dark:text-indigo-400">100+</span>
+                                    <svg className="w-3.5 h-3.5 text-zinc-400 group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                    </svg>
+                                </div>
+                                <span className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">LeetCode Solutions</span>
+                            </a>
                         </div>
 
                         {/* Social Links */}
@@ -68,18 +92,14 @@ function About() {
                         </div>
                     </div>
 
-                    {/* Profile Image with Glowing Aura Ring */}
+                    {/* Profile Image with transparent background and no square border */}
                     <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div className="relative group">
-                            {/* Ambient glowing backlight ring */}
-                            <div className="absolute -inset-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 rounded-full lg:rounded-3xl blur-md opacity-40 group-hover:opacity-75 transition-opacity duration-500" />
-                            <div className="relative">
-                                <img
-                                    src="tomtait.png"
-                                    alt="Tom Tait"
-                                    className="w-48 h-48 lg:w-full lg:h-auto lg:max-w-md object-cover rounded-full lg:rounded-2xl border-2 border-indigo-500/50 dark:border-zinc-800 shadow-2xl group-hover:scale-[1.02] group-hover:border-indigo-400 transition-all duration-300"
-                                />
-                            </div>
+                        <div className="relative bg-transparent">
+                            <img
+                                src="tomtait.png"
+                                alt="Tom Tait"
+                                className="w-48 h-48 lg:w-full lg:h-auto lg:max-w-md object-contain bg-transparent transition-transform duration-300 hover:scale-[1.02]"
+                            />
                         </div>
                     </div>
                 </div>

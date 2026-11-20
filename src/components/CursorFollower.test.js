@@ -41,7 +41,7 @@ describe('CursorFollower', () => {
         expect(container.querySelector('[aria-hidden="true"]')).toBeInTheDocument();
     });
 
-    test('handles mousemove, mousedown, and mouseup without resetting transforms to offset positions', () => {
+    test('handles mousemove without resetting transforms to offset positions and ignores click animations', () => {
         const { container } = render(
             <div>
                 <CursorFollower />
@@ -71,16 +71,12 @@ describe('CursorFollower', () => {
         expect(dot.style.opacity).toBe('1');
         expect(dot.style.transform).toBe('translate3d(250px, 300px, 0)');
 
-        // On mousedown (click down)
+        // On mousedown (click down) - should not glitch or reset transform
         act(() => {
             fireEvent.mouseDown(window);
         });
 
-        // Dot should scale up on click and NOT have its transform reset to -100px
-        expect(dot.style.scale).toBe('1.5');
         expect(dot.style.transform).toBe('translate3d(250px, 300px, 0)');
-        expect(ring.style.scale).toBe('0.75');
-        // Transform should not be reset by React inline styles
         expect(ring.style.transform).not.toBe('translate3d(-100px, -100px, 0)');
 
         // On mouseup (release click)
@@ -88,12 +84,10 @@ describe('CursorFollower', () => {
             fireEvent.mouseUp(window);
         });
 
-        expect(dot.style.scale).toBe('1');
-        expect(ring.style.scale).toBe('1');
         expect(dot.style.transform).toBe('translate3d(250px, 300px, 0)');
     });
 
-    test('scales up when hovering over interactive elements', () => {
+    test('highlights when hovering over interactive elements without glitching transforms', () => {
         const { container, getByTestId } = render(
             <div>
                 <CursorFollower />
@@ -103,22 +97,19 @@ describe('CursorFollower', () => {
 
         const outerContainer = container.querySelector('[aria-hidden="true"]');
         const ring = outerContainer.children[1];
-        const dot = outerContainer.children[2];
         const button = getByTestId('btn');
 
         act(() => {
             fireEvent.mouseOver(button);
         });
 
-        expect(ring.style.scale).toBe('1.7');
-        expect(dot.style.scale).toBe('0.6');
+        expect(ring.style.borderColor).toBe('rgba(129, 140, 248, 0.95)');
 
         act(() => {
             fireEvent.mouseOver(document.body);
         });
 
-        expect(ring.style.scale).toBe('1');
-        expect(dot.style.scale).toBe('1');
+        expect(ring.style.borderColor).toBe('rgba(99, 102, 241, 0.45)');
     });
 
     test('cleans up event listeners and animation frame on unmount', () => {

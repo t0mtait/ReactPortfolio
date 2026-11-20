@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -38,12 +37,9 @@ function App() {
                       <Experience/>
                   </div>
                   <div className="section-animate section-delay-4">
-                      <Education/>
-                  </div>
-                  <div className="section-animate section-delay-5">
                       <Projects />
                   </div>
-                  <div className="section-animate section-delay-6">
+                  <div className="section-animate section-delay-5">
                       <Contact />
                   </div>
               </div>

@@ -4,14 +4,14 @@ function Projects() {
     const projects = [
         {
             id: "01",
-            category: "Full-Stack Web App",
+            category: "Full-Stack Healthcare App",
             title: "SupplementDB",
-            description: "Web application allowing users to monitor their supplement regimen.",
-            technologies: ["React", "HAPI-FHIR", "PostgreSQL", "MongoDB"],
+            description: "Auth-first healthcare platform to track, analyse, and share personal supplement stacks synchronized to HAPI FHIR R4 and MongoDB with daily wellness check-ins.",
+            technologies: ["Next.js", "HAPI-FHIR", "MongoDB", "Auth0", "Docker"],
             highlights: [
-                "Full-stack with React, PostgreSQL, and MongoDB",
-                "Explore, track, and share supplements",
-                "HAPI-FHIR server for EHR integration"
+                "Personal stack stored as FHIR MedicationStatement resources mirrored in MongoDB",
+                "Daily wellness check-in system with 90-day mood, energy, sleep, and circadian habit tracking",
+                "Auth0 authentication, automated research ingestion, and drug-supplement interaction checking"
             ],
             visitUrl: "https://supplementdb.app",
             accentBar: "from-indigo-500 via-violet-500 to-cyan-400",
@@ -25,13 +25,13 @@ function Projects() {
         {
             id: "02",
             category: "Machine Learning",
-            title: "NBA-AI",
-            description: "ML project using historical team statistics to predict NBA game outcomes.",
-            technologies: ["Python", "Machine Learning", "Data Analysis"],
+            title: "NBA Win Predictor",
+            description: "Flask web app training a logistic-regression model on 69,000+ historical NBA team box scores with an interactive What-If Game Win Simulator.",
+            technologies: ["Python", "Flask", "scikit-learn", "Docker", "REST API"],
             highlights: [
-                "Predictive model using stat. analysis and ML",
-                "Analyze statistics to forecast outcomes",
-                "Ranks statistics by impact on game results"
+                "Scikit-learn Pipeline (StandardScaler + Logistic Regression) trained on 69,000+ historical box scores",
+                "Interactive What-If Game Win Simulator scoring hypothetical game stats against the live model",
+                "Automated retraining pipeline ingesting Kaggle dataset and live ESPN box score APIs"
             ],
             githubUrl: "https://github.com/t0mtait/nba-ai",
             visitUrl: "https://nba.tomjt.com",
