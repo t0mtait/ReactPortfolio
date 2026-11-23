@@ -55,7 +55,7 @@ function Projects() {
                 "Self-hosted architecture using Next.js and Node 22 built-in SQLite"
             ],
             githubUrl: "https://github.com/t0mtait/smpl",
-            visitUrl: "https://smpl.tomjt.com",
+            visitUrl: "https://gosmpl.app",
             accentBar: "from-amber-400 via-orange-500 to-rose-500",
             badgeStyle: "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
             icon: (
